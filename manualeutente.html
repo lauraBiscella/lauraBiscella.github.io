@@ -20,8 +20,8 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 bg-white shadow-sm">
-    <div class="container">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="index.html">Curve 3D</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
@@ -56,7 +56,7 @@
         <p>Per selezionare il tipo di curva desiderata cliccare sul bottone corrispondente.</p>
     </div>
     <div class="col-md-5 text-center">
-        <img src="Immagini/Menu.png" class="img-fluid rounded shadow" style="max-width:220px;">
+        <img src="Immagini/Menu.png" class="img-fluid rounded shadow" style="max-width:300px;">
     </div>
 </div>
 
@@ -74,50 +74,56 @@
             <p>In queste interfacce sarà possibile svolgere quattro operazioni principali.</p>
     </div>
     <div class="col-md-5 text-center">
-        <img src="Immagini/Schermata1.png" class="img-fluid rounded shadow" style="max-width:280px;">
+        <img src="Immagini/Schermata1.png" class="img-fluid rounded shadow" style="max-width:500px;">
     </div>
 </div>
 
 <h3>Creazione della curva</h3>
 <div class="row align-items-center mb-5">
-    <p>All’apertura di un ambiente di creazione la curva può essere creata posizionando i punti di controllo del poligono (4 per le Bezier di grado 3, 5 per le Bezier di grado 4, 7 per le B-Spline) nello spazio 3D (vedi sezione Spazio 3D).</p>
+    <div class="col-md-12">
+        <p>All’apertura di un ambiente di creazione la curva può essere creata posizionando i punti di controllo del poligono (4 per le Bezier di grado 3, 5 per le Bezier di grado 4, 7 per le B-Spline) nello spazio 3D (vedi sezione Spazio 3D).</p>
 
-    <p>Sarà possibile eseguire questa operazione in due modi:</p>
+        <p>Sarà possibile eseguire questa operazione in due modi:</p>
 
-    <ul>
-        <li>Cliccando con il tasto sinistro del mouse in un punto dello spazio 3D</li>
-        <li>Digitando le coordinate XYZ per ogni punto di controllo nel pannello corrispondente (vedi sezione Pannello dei punti di controllo)</li>
-    </ul>
+        <ul>
+            <li>Cliccando con il tasto sinistro del mouse in un punto dello spazio 3D</li>
+            <li>Digitando le coordinate XYZ per ogni punto di controllo nel pannello corrispondente (vedi sezione Pannello dei punti di controllo)</li>
+        </ul>
 
-    <p>La curva di creerà autonomamente sulla base dei punti di controllo generati.</p>
+        <p>La curva di creerà autonomamente sulla base dei punti di controllo generati.</p>
+    </div>
 </div>
 
 <h3>Visualizzazione della curva</h3>
 <div class="row align-items-center mb-5">
-    <p>Alla creazione della curva, la telecamera punterà sempre al centro di essa. Per visualizzarla da diverse angolazioni:</p>
+    <div class="col-md-12">
+        <p>Alla creazione della curva, la telecamera punterà sempre al centro di essa. Per visualizzarla da diverse angolazioni:</p>
 
-    <ul>
-        <li>Premendo A per ruotare verso sinistra</li>
-        <li>Premendo D per ruotare verso destra</li>
-        <li>Premendo W per ruotare verso l'alto</li>
-        <li>Premendo S per ruotare verso il basso</li>
-        <li>Scorrendo la rotella del mouse in avanti per avvicinarsi</li>
-        <li>Scorrendo la rotella del mouse indietro per allontanarsi</li>
-    </ul>
+        <ul>
+            <li>Premendo A per ruotare verso sinistra</li>
+            <li>Premendo D per ruotare verso destra</li>
+            <li>Premendo W per ruotare verso l'alto</li>
+            <li>Premendo S per ruotare verso il basso</li>
+            <li>Scorrendo la rotella del mouse in avanti per avvicinarsi</li>
+            <li>Scorrendo la rotella del mouse indietro per allontanarsi</li>
+        </ul>
+    </div>
 </div>
 
 <h3>Modifica della curva</h3>
 <div class="row align-items-center mb-5">
-    <p>Una volta creata, la curva potrà essere modificata agendo in tre modi distinti:</p>
+    <div class="col-md-12">
+        <p>Una volta creata, la curva potrà essere modificata agendo in tre modi distinti:</p>
 
-    <ul>
-        <li>Tenendo premuto con il tasto sinistro del mouse su un punto di controllo questo può essere trascinato in un punto a piacere dello spazio.</li>
-        <li>Inserendo un valore specifico per le coordinate X, Y o Z di un punto di controllo nel pannello (vedi sezione Pannello dei punti di controllo)</li>
-        <li><strong>Solo per le B-Spline</strong>: modificando il valore di uno dei nodi della curva utilizzando il pannello corrispondente</li>
-    </ul>
+        <ul>
+            <li>Tenendo premuto con il tasto sinistro del mouse su un punto di controllo questo può essere trascinato in un punto a piacere dello spazio.</li>
+            <li>Inserendo un valore specifico per le coordinate X, Y o Z di un punto di controllo nel pannello (vedi sezione Pannello dei punti di controllo)</li>
+            <li><strong>Solo per le B-Spline</strong>: modificando il valore di uno dei nodi della curva utilizzando il pannello corrispondente</li>
+        </ul>
 
-    <p>Lo spostamento dei punti di controllo modificherà automaticamente il poligono di controllo e dunque la curva risultante.</p>
-    <p><strong>Per le B-Spline:</strong> lo spostamento dei nodi modificherà autonomamente il poligono di Bezier sotteso e dunque la curva risultante.</p>
+        <p>Lo spostamento dei punti di controllo modificherà automaticamente il poligono di controllo e dunque la curva risultante.</p>
+        <p><strong>Per le B-Spline:</strong> lo spostamento dei nodi modificherà autonomamente il poligono di Bezier sotteso e dunque la curva risultante.</p>
+    </div>
 </div>
 
 <h3>Analisi della curva</h3>
@@ -156,7 +162,7 @@
         <p> La linea rossa rappresenta la corrispondenza con un punto specifico del dominio. </p>
     </div>
     <div class="col-md-5 text-center">
-        <img src="Immagini/Pannello curvatura torsione in azione.png" class="img-fluid rounded shadow" style="max-width:220px;">
+        <img src="Immagini/Pannello curvatura torsione in azione.png" class="img-fluid rounded shadow" style="max-width:300px;">
     </div>
 </div>
 
@@ -179,7 +185,7 @@
         <p><strong>Nota bene</strong>: l’approssimazione dei valori da inserire nella caselle è in centesimi e i numeri decimali vanno inseriti con la , e non con il .</p>
     </div>
     <div class="col-md-5 text-center">
-        <img src="Immagini/Pannello nodi.png" class="img-fluid rounded shadow" style="max-width:220px;">
+        <img src="Immagini/Pannello nodi.png" class="img-fluid rounded shadow" style="max-width:180px;">
     </div>
 </div>
 
@@ -203,9 +209,9 @@
         <p><strong>Nota bene</strong>: l’approssimazione dei valori da inserire nella caselle è in centesimi e i numeri decimali vanno inseriti con la , e non con il .</p>
     </div>
     <div class="col-md-5 text-center">
-        <img src="Immagini/Pannello info.png" class="img-fluid rounded shadow mb-2" style="max-width:200px;">
-        <img src="Immagini/Pannello dominio.png" class="img-fluid rounded shadow mb-2" style="max-width:200px;">
-        <img src="Immagini/Parametrotspline.png" class="img-fluid rounded shadow" style="max-width:200px;">
+        <img src="Immagini/Pannello info.png" class="img-fluid rounded shadow mb-2" style="max-width:300px;">
+        <img src="Immagini/Pannello dominio.png" class="img-fluid rounded shadow mb-2" style="max-width:300px;">
+        <img src="Immagini/Parametrotspline.png" class="img-fluid rounded shadow" style="max-width:300px;">
     </div>
 </div>
 
@@ -215,7 +221,7 @@
         <p> Premendo questo bottone, presente in basso, sarà possibile tornare al menu principale di selezione della curva. </p>
     </div>
     <div class="col-md-5 text-center">
-        <img src="Immagini/Bottone back.png" class="img-fluid rounded shadow" style="max-width:200px;">
+        <img src="Immagini/Bottone back.png" class="img-fluid rounded shadow" style="max-width:300px;">
     </div>
 </div>
 
