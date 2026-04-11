@@ -11,7 +11,7 @@
 
         <nav>
             <a href="index.html">Home</a>
-            <a href="manualeUtente.html">Manuale utente</a>
+            <a href="manualeutente.html">Manuale utente</a>
         </nav>
 
         <div class="container">
@@ -27,159 +27,187 @@
                     <li>Curva di Bezier di grado 4 (Bottone k = 4)</li>
                     <li>Curva B-Spline di grado 3 con quattro incollamenti di curve di Bezier (Bottone k = 3 l = 4)</li>
                 </ul>
+                <p>Per selezionare il tipo di curva desiderata cliccare sul bottone corrispondente.</p>
             </div>
             <div class="col-md-5">
                 <img src="Immagini/Menu.png" class="img-fluid">
             </div>
 
-            <p>Per selezionare il tipo di curva desiderata cliccare sul bottone corrispondente.</p>
-
             <h2>Ambienti di creazione</h2>
+            <div class="row align-items-start"></div>
+                <p>
+                Tutti e tre i possibili ambienti di creazione si presentano con un menu a pannelli a destra contente i dati della curva e uno spazio 3D a sinistra contenente la curva ed evidenziato dal sistema di riferimento indicato come segue:
+                </p>
 
-            <img src="Immagini/Schermata1.png" alt="ambiente">
+                <ul>
+                <li>Asse X in rosso</li>
+                <li>Asse Y in verde</li>
+                <li>Asse Z in blu</li>
+                <li>Origine: pallino bianco</li>
+                </ul>
 
-            <p>
-            Tutti e tre i possibili ambienti di creazione si presentano con un menu a pannelli a destra contente i dati della curva e uno spazio 3D a sinistra contenente la curva ed evidenziato dal sistema di riferimento indicato come segue:
-            </p>
+                <p><strong>Nota bene</strong>: la sezione di asse positiva ha un colore più brillante rispetto a quella negativa.</p>
 
-            <ul>
-            <li>Asse X in rosso</li>
-            <li>Asse Y in verde</li>
-            <li>Asse Z in blu</li>
-            <li>Origine: pallino bianco</li>
-            </ul>
-
-            <p><strong>Nota bene</strong>: la sezione di asse positiva ha un colore più brillante rispetto a quella negativa.</p>
-
-            <p>In queste interfacce sarà possibile svolgere quattro operazioni principali.</p>
+                <p>In queste interfacce sarà possibile svolgere quattro operazioni principali.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="Immagini/Schermata1.png" class="img-fluid">
+            </div>
 
             <h3>Creazione della curva</h3>
+            <div class="row align-items-start"></div>
+                <p>All’apertura di un ambiente di creazione la curva può essere creata posizionando i punti di controllo del poligono (4 per le Bezier di grado 3, 5 per le Bezier di grado 4, 7 per le B-Spline) nello spazio 3D (vedi sezione Spazio 3D).</p>
 
-            <p>All’apertura di un ambiente di creazione la curva può essere creata posizionando i punti di controllo del poligono (4 per le Bezier di grado 3, 5 per le Bezier di grado 4, 7 per le B-Spline) nello spazio 3D (vedi sezione Spazio 3D).</p>
+                <p>Sarà possibile eseguire questa operazione in due modi:</p>
 
-            <p>Sarà possibile eseguire questa operazione in due modi:</p>
+                <ul>
+                <li>Cliccando con il tasto sinistro del mouse in un punto dello spazio 3D</li>
+                <li>Digitando le coordinate XYZ per ogni punto di controllo nel pannello corrispondente (vedi sezione Pannello dei punti di controllo)</li>
+                </ul>
 
-            <ul>
-            <li>Cliccando con il tasto sinistro del mouse in un punto dello spazio 3D</li>
-            <li>Digitando le coordinate XYZ per ogni punto di controllo nel pannello corrispondente (vedi sezione Pannello dei punti di controllo)</li>
-            </ul>
-
-            <p>La curva di creerà autonomamente sulla base dei punti di controllo generati.</p>
+                <p>La curva di creerà autonomamente sulla base dei punti di controllo generati.</p>
+            </div>
 
             <h3>Visualizzazione della curva</h3>
+            <div class="row align-items-start"></div>
+                <p>Alla creazione della curva, la telecamera punterà sempre al centro di essa. Per visualizzarla da diverse angolazioni:</p>
 
-            <p>Alla creazione della curva, la telecamera punterà sempre al centro di essa. Per visualizzarla da diverse angolazioni:</p>
-
-            <ul>
-            <li>Premendo A per ruotare verso sinistra</li>
-            <li>Premendo D per ruotare verso destra</li>
-            <li>Premendo W per ruotare verso l'alto</li>
-            <li>Premendo S per ruotare verso il basso</li>
-            <li>Scorrendo la rotella del mouse in avanti per avvicinarsi</li>
-            <li>Scorrendo la rotella del mouse indietro per allontanarsi</li>
-            </ul>
+                <ul>
+                <li>Premendo A per ruotare verso sinistra</li>
+                <li>Premendo D per ruotare verso destra</li>
+                <li>Premendo W per ruotare verso l'alto</li>
+                <li>Premendo S per ruotare verso il basso</li>
+                <li>Scorrendo la rotella del mouse in avanti per avvicinarsi</li>
+                <li>Scorrendo la rotella del mouse indietro per allontanarsi</li>
+                </ul>
+            </div>
 
             <h3>Modifica della curva</h3>
+            <div class="row align-items-start"></div>
+                <p>
+                Una volta creata, la curva potrà essere modificata agendo in tre modi distinti:
+                </p>
 
-            <p>
-            Una volta creata, la curva potrà essere modificata agendo in tre modi distinti:
-            </p>
+                <ul>
+                <li>Tenendo premuto con il tasto sinistro del mouse su un punto di controllo questo può essere trascinato in un punto a piacere dello spazio.</li>
+                <li>Inserendo un valore specifico per le coordinate X, Y o Z di un punto di controllo nel pannello (vedi sezione Pannello dei punti di controllo)</li>
+                <li><strong>Solo per le B-Spline</strong>: modificando il valore di uno dei nodi della curva utilizzando il pannello corrispondente</li>
+                </ul>
 
-            <ul>
-            <li>Tenendo premuto con il tasto sinistro del mouse su un punto di controllo questo può essere trascinato in un punto a piacere dello spazio.</li>
-            <li>Inserendo un valore specifico per le coordinate X, Y o Z di un punto di controllo nel pannello (vedi sezione Pannello dei punti di controllo)</li>
-            <li><strong>Solo per le B-Spline</strong>: modificando il valore di uno dei nodi della curva utilizzando il pannello corrispondente</li>
-            </ul>
+                <p>
+                Lo spostamento dei punti di controllo modificherà automaticamente il poligono di controllo e dunque la curva risultante.
+                </p>
 
-            <p>
-            Lo spostamento dei punti di controllo modificherà automaticamente il poligono di controllo e dunque la curva risultante.
-            </p>
-
-            <p>
-            <strong>Per le B-Spline:</strong> lo spostamento dei nodi modificherà autonomamente il poligono di Bezier sotteso e dunque la curva risultante.
-            </p>
+                <p>
+                <strong>Per le B-Spline:</strong> lo spostamento dei nodi modificherà autonomamente il poligono di Bezier sotteso e dunque la curva risultante.
+                </p>
+            </div>
 
             <h3>Analisi della curva</h3>
-
-            <p>
-            La curva presente a schermo può essere analizzata utilizzando i pannelli presenti nel menu a destra di ogni ambiente di creazione. Per maggiori dettagli leggere la sezione Menu a pannelli.
-            </p>
-
+            <div class="row align-items-start"></div>
+                <p>
+                La curva presente a schermo può essere analizzata utilizzando i pannelli presenti nel menu a destra di ogni ambiente di creazione. Per maggiori dettagli leggere la sezione Menu a pannelli.
+                </p>
+            
             <h2>Spazio 3D</h2>
 
-            <img src="Immagini/Curva.png" alt="curva">
+            <div class="row align-items-start"></div>
+                <p>
+                Lo spazio 3D posizionato sul lato sinistro di ogni ambiente di creazione conterrà la visualizzazione della curva prescelta:
+                </p>
 
-            <p>
-            Lo spazio 3D posizionato sul lato sinistro di ogni ambiente di creazione conterrà la visualizzazione della curva prescelta:
-            </p>
+                <ul>
+                <li>Pallini bianchi: punti di controllo della curva</li>
+                <li>Segmenti rossi: poligono di controllo</li>
+                <li>Linea bianca: curva risultante</li>
+                <li>Pallino giallo: punto della curva selezionato</li>
+                </ul>
+            </div>
+            <div class="col-md-5">
+                <img src="Immagini/Curva.png" class="img-fluid">
+            </div>
 
-            <ul>
-            <li>Pallini bianchi: punti di controllo della curva</li>
-            <li>Segmenti rossi: poligono di controllo</li>
-            <li>Linea bianca: curva risultante</li>
-            <li>Pallino giallo: punto della curva selezionato</li>
-            </ul>
+            <div class="row align-items-start"></div>
+                <p><strong>Solo per B-Spline:</strong></p>
 
-            <img src="Immagini/CurvaBspline.png" alt="bspline">
-
-            <p><strong>Solo per B-Spline:</strong></p>
-
-            <ul>
-            <li>Linee blu: poligono di controllo di Bezier</li>
-            <li>Trattini verdi: punti di controllo di Bezier</li>
-            </ul>
+                <ul>
+                <li>Linee blu: poligono di controllo di Bezier</li>
+                <li>Trattini verdi: punti di controllo di Bezier</li>
+                </ul>
+            </div>
+            <div class="col-md-5">
+                <img src="Immagini/CurvaBspline.png" class="img-fluid">
+            </div>
 
             <h2>Menu a pannelli</h2>
 
             <h3>Pannello di curvatura e torsione</h3>
 
-            <img src="Immagini/Pannello curvatura torsione in azione.png">
-
-            <p>
-            Questo pannello permette di visualizzare i grafici di curvatura e torsione per ogni punto della curva.
-            </p>
+            <div class="row align-items-start"></div>
+                <p>
+                Questo pannello permette di visualizzare i grafici di curvatura e torsione per ogni punto della curva.
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img src="Immagini/Pannello curvatura torsione in azione.png" class="img-fluid">
+            </div>
 
             <h3>Pannello dei punti di controllo</h3>
 
-            <img src="Immagini/Pannello punti di controllo.png">
+            <div class="row align-items-start"></div>
+                <p>
+                Permette di creare o modificare le coordinate XYZ dei punti di controllo.
+                </p>
 
-            <p>
-            Permette di creare o modificare le coordinate XYZ dei punti di controllo.
-            </p>
-
-            <p><strong>Nota bene</strong>: numeri con la virgola (,) e precisione centesimi.</p>
+                <p><strong>Nota bene</strong>: numeri con la virgola (,) e precisione centesimi.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="Immagini/Pannello punti di controllo.png" class="img-fluid">
+            </div>
 
             <h3>Pannello dei nodi</h3>
 
-            <img src="Immagini/Pannello nodi.png">
+            <div class="row align-items-start"></div>
+                <p>
+                Presente solo per B-Spline, permette di modificare i nodi della curva.
+                </p>
 
-            <p>
-            Presente solo per B-Spline, permette di modificare i nodi della curva.
-            </p>
+                <p><strong>Nota bene</strong>: vincoli di monotonia sui nodi.</p>
+            </div>
 
-            <p><strong>Nota bene</strong>: vincoli di monotonia sui nodi.</p>
+            <div class="col-md-5">
+                <img src="Immagini/Pannello nodi.png" class="img-fluid">
+            </div>
 
             <h3>Pannello del dominio della curva</h3>
 
-            <img src="Immagini/Pannello info.png">
-            <img src="Immagini/Pannello dominio.png">
+            <div class="row align-items-start"></div>
+                <p>
+                Permette di analizzare un punto della curva lungo il dominio.
+                </p>
 
-            <p>
-            Permette di analizzare un punto della curva lungo il dominio.
-            </p>
-
-            <img src="Immagini/Parametrotspline.png">
-
-            <p><strong>Solo per B-Spline:</strong> indicatori dei nodi sul dominio.</p>
+                <p><strong>Solo per B-Spline:</strong> indicatori dei nodi sul dominio.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="Immagini/Pannello info.png" class="img-fluid">
+            </div>
+            <div class="col-md-5">
+                <img src="Immagini/Pannello dominio.png" class="img-fluid">
+            </div>
+            <div class="col-md-5">
+                <img src="Immagini/Parametrotspline.png" class="img-fluid">
+            </div>
 
             <h3>Bottone di ritorno</h3>
 
-            <img src="Immagini/Bottone back.png">
-
-            <p>
-            Permette di tornare al menu principale.
-            </p>
-
+            <div class="row align-items-start"></div>
+                <p>
+                Permette di tornare al menu principale.
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img src="Immagini/Bottone back.png" class="img-fluid">
+            </div>
         </div>
 
     </body>
