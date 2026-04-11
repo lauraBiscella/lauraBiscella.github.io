@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manuale Utente</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background: #f5f5f5;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: #222;
+      padding: 12px;
+      display: flex;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 6px 10px;
+    }
+
+    nav a:hover {
+      background: #444;
+      border-radius: 5px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+    }
+
+    h1, h2, h3 {
+      color: #222;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 10px 0;
+      border-radius: 6px;
+    }
+
+    .nota {
+      background: #fff3cd;
+      padding: 10px;
+      border-left: 4px solid #ffcc00;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- MENU (puoi collegarlo anche all’index) -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="manuale-utente.html">Manuale</a>
+</nav>
+
+<div class="container">
+
+<h1>Manuale utente</h1>
+
+<h2>Menu principale</h2>
+
+<img src="Immagini/Menu.png" alt="menu">
+
+<p>All'avvio l'applicazione presenta un menu con tre opzioni:</p>
+
+<ul>
+  <li>Curva di Bezier di grado 3 (k = 3)</li>
+  <li>Curva di Bezier di grado 4 (k = 4)</li>
+  <li>B-Spline di grado 3 (l = 4)</li>
+</ul>
+
+<hr>
+
+<h2>Ambienti di creazione</h2>
+
+<img src="Immagini/Schermata1.png" alt="ambiente">
+
+<p>Ogni ambiente ha spazio 3D a sinistra e pannelli a destra.</p>
+
+<ul>
+  <li>X rosso</li>
+  <li>Y verde</li>
+  <li>Z blu</li>
+  <li>Origine bianca</li>
+</ul>
+
+<h3>Creazione curva</h3>
+<p>Puoi creare punti con mouse o input numerico.</p>
+
+<h3>Visualizzazione</h3>
+<p>WASD + rotella mouse per la camera.</p>
+
+<h3>Modifica</h3>
+<p>Drag & drop o input numerico.</p>
+
+<h3>Analisi</h3>
+<p>Usa i pannelli laterali.</p>
+
+<hr>
+
+<h2>Spazio 3D</h2>
+
+<img src="Immagini/Curva.png">
+
+<ul>
+  <li>Punti bianchi: controllo</li>
+  <li>Segmenti rossi: poligono</li>
+  <li>Linea bianca: curva</li>
+  <li>Pallino giallo: punto selezionato</li>
+</ul>
+
+<h3>B-Spline</h3>
+
+<img src="Immagini/CurvaBspline.png">
+
+<ul>
+  <li>Linee blu: Bezier</li>
+  <li>Verdi: punti Bezier</li>
+</ul>
+
+<hr>
+
+<h2>Menu a pannelli</h2>
+
+<h3>Curvatura e torsione</h3>
+<img src="Immagini/Pannello curvatura torsione in azione.png">
+
+<h3>Punti di controllo</h3>
+<img src="Immagini/Pannello punti di controllo.png">
+
+<h3>Nodi (B-Spline)</h3>
+<img src="Immagini/Pannello nodi.png">
+
+<h3>Dominio curva</h3>
+<img src="Immagini/Pannello info.png">
+
+<div class="nota">
+  I numeri decimali vanno inseriti con la virgola (,).
+</div>
+
+<h3>Bottone ritorno</h3>
+<img src="Immagini/Bottone back.png">
+
+</div>
+
+</body>
+</html>
