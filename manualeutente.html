@@ -46,6 +46,27 @@
         margin: 10px 0;
         }
 
+        .section-flex {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        }
+
+        .section-text {
+        flex: 1;
+        }
+
+        .section-image {
+        flex: 1;
+        }
+
+        .section-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        }
+
         </style>
     </head>
 
@@ -62,15 +83,19 @@
 
             <h2>Menu principale</h2>
 
-            <img src="Immagini/Menu.png" alt="menu">
+            <div class="section-text"></div>
+                <p>All'avvio l'applicazione presenta un menu con tre opzioni possibili di creazione di curve:</p>
 
-            <p>All'avvio l'applicazione presenta un menu con tre opzioni possibili di creazione di curve:</p>
+                <ul>
+                    <li>Curva di Bezier di grado 3 (Bottone k = 3)</li>
+                    <li>Curva di Bezier di grado 4 (Bottone k = 4)</li>
+                    <li>Curva B-Spline di grado 3 con quattro incollamenti di curve di Bezier (Bottone k = 3 l = 4)</li>
+                </ul>
+            </div>
 
-            <ul>
-            <li>Curva di Bezier di grado 3 (Bottone k = 3)</li>
-            <li>Curva di Bezier di grado 4 (Bottone k = 4)</li>
-            <li>Curva B-Spline di grado 3 con quattro incollamenti di curve di Bezier (Bottone k = 3 l = 4)</li>
-            </ul>
+            <div class="section-image">
+                <img src="Immagini/Menu.png">
+            </div>
 
             <p>Per selezionare il tipo di curva desiderata cliccare sul bottone corrispondente.</p>
 
