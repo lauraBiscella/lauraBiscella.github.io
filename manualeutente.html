@@ -1,162 +1,226 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Manuale Utente</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manuale utente</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      line-height: 1.6;
-      background: #f5f5f5;
-    }
+        <style>
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        line-height: 1.6;
+        background: #f5f5f5;
+        }
 
-    nav {
-      position: sticky;
-      top: 0;
-      background: #222;
-      padding: 12px;
-      display: flex;
-      gap: 15px;
-      z-index: 1000;
-    }
+        nav {
+        position: sticky;
+        top: 0;
+        background: #222;
+        padding: 12px;
+        display: flex;
+        gap: 15px;
+        z-index: 1000;
+        }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 6px 10px;
-    }
+        nav a {
+        color: white;
+        text-decoration: none;
+        padding: 6px 10px;
+        }
 
-    nav a:hover {
-      background: #444;
-      border-radius: 5px;
-    }
+        nav a:hover {
+        background: #444;
+        border-radius: 5px;
+        }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      background: white;
-    }
+        .container {
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        }
 
-    h1, h2, h3 {
-      color: #222;
-    }
+        img {
+        max-width: 100%;
+        margin: 10px 0;
+        }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 10px 0;
-      border-radius: 6px;
-    }
+        </style>
+    </head>
 
-    .nota {
-      background: #fff3cd;
-      padding: 10px;
-      border-left: 4px solid #ffcc00;
-    }
-  </style>
-</head>
+    <body>
 
-<body>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="manualeUtente.html">Manuale utente</a>
+        </nav>
 
-<!-- MENU (puoi collegarlo anche all’index) -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="manuale-utente.html">Manuale</a>
-</nav>
+        <div class="container">
 
-<div class="container">
+            <h1>Manuale utente</h1>
 
-<h1>Manuale utente</h1>
+            <h2>Menu principale</h2>
 
-<h2>Menu principale</h2>
+            <img src="Immagini/Menu.png" alt="menu">
 
-<img src="Immagini/Menu.png" alt="menu">
+            <p>All'avvio l'applicazione presenta un menu con tre opzioni possibili di creazione di curve:</p>
 
-<p>All'avvio l'applicazione presenta un menu con tre opzioni:</p>
+            <ul>
+            <li>Curva di Bezier di grado 3 (Bottone k = 3)</li>
+            <li>Curva di Bezier di grado 4 (Bottone k = 4)</li>
+            <li>Curva B-Spline di grado 3 con quattro incollamenti di curve di Bezier (Bottone k = 3 l = 4)</li>
+            </ul>
 
-<ul>
-  <li>Curva di Bezier di grado 3 (k = 3)</li>
-  <li>Curva di Bezier di grado 4 (k = 4)</li>
-  <li>B-Spline di grado 3 (l = 4)</li>
-</ul>
+            <p>Per selezionare il tipo di curva desiderata cliccare sul bottone corrispondente.</p>
 
-<hr>
+            <h2>Ambienti di creazione</h2>
 
-<h2>Ambienti di creazione</h2>
+            <img src="Immagini/Schermata1.png" alt="ambiente">
 
-<img src="Immagini/Schermata1.png" alt="ambiente">
+            <p>
+            Tutti e tre i possibili ambienti di creazione si presentano con un menu a pannelli a destra contente i dati della curva e uno spazio 3D a sinistra contenente la curva ed evidenziato dal sistema di riferimento indicato come segue:
+            </p>
 
-<p>Ogni ambiente ha spazio 3D a sinistra e pannelli a destra.</p>
+            <ul>
+            <li>Asse X in rosso</li>
+            <li>Asse Y in verde</li>
+            <li>Asse Z in blu</li>
+            <li>Origine: pallino bianco</li>
+            </ul>
 
-<ul>
-  <li>X rosso</li>
-  <li>Y verde</li>
-  <li>Z blu</li>
-  <li>Origine bianca</li>
-</ul>
+            <p><strong>Nota bene</strong>: la sezione di asse positiva ha un colore più brillante rispetto a quella negativa.</p>
 
-<h3>Creazione curva</h3>
-<p>Puoi creare punti con mouse o input numerico.</p>
+            <p>In queste interfacce sarà possibile svolgere quattro operazioni principali.</p>
 
-<h3>Visualizzazione</h3>
-<p>WASD + rotella mouse per la camera.</p>
+            <h3>Creazione della curva</h3>
 
-<h3>Modifica</h3>
-<p>Drag & drop o input numerico.</p>
+            <p>All’apertura di un ambiente di creazione la curva può essere creata posizionando i punti di controllo del poligono (4 per le Bezier di grado 3, 5 per le Bezier di grado 4, 7 per le B-Spline) nello spazio 3D (vedi sezione Spazio 3D).</p>
 
-<h3>Analisi</h3>
-<p>Usa i pannelli laterali.</p>
+            <p>Sarà possibile eseguire questa operazione in due modi:</p>
 
-<hr>
+            <ul>
+            <li>Cliccando con il tasto sinistro del mouse in un punto dello spazio 3D</li>
+            <li>Digitando le coordinate XYZ per ogni punto di controllo nel pannello corrispondente (vedi sezione Pannello dei punti di controllo)</li>
+            </ul>
 
-<h2>Spazio 3D</h2>
+            <p>La curva di creerà autonomamente sulla base dei punti di controllo generati.</p>
 
-<img src="Immagini/Curva.png">
+            <h3>Visualizzazione della curva</h3>
 
-<ul>
-  <li>Punti bianchi: controllo</li>
-  <li>Segmenti rossi: poligono</li>
-  <li>Linea bianca: curva</li>
-  <li>Pallino giallo: punto selezionato</li>
-</ul>
+            <p>Alla creazione della curva, la telecamera punterà sempre al centro di essa. Per visualizzarla da diverse angolazioni:</p>
 
-<h3>B-Spline</h3>
+            <ul>
+            <li>Premendo A per ruotare verso sinistra</li>
+            <li>Premendo D per ruotare verso destra</li>
+            <li>Premendo W per ruotare verso l'alto</li>
+            <li>Premendo S per ruotare verso il basso</li>
+            <li>Scorrendo la rotella del mouse in avanti per avvicinarsi</li>
+            <li>Scorrendo la rotella del mouse indietro per allontanarsi</li>
+            </ul>
 
-<img src="Immagini/CurvaBspline.png">
+            <h3>Modifica della curva</h3>
 
-<ul>
-  <li>Linee blu: Bezier</li>
-  <li>Verdi: punti Bezier</li>
-</ul>
+            <p>
+            Una volta creata, la curva potrà essere modificata agendo in tre modi distinti:
+            </p>
 
-<hr>
+            <ul>
+            <li>Tenendo premuto con il tasto sinistro del mouse su un punto di controllo questo può essere trascinato in un punto a piacere dello spazio.</li>
+            <li>Inserendo un valore specifico per le coordinate X, Y o Z di un punto di controllo nel pannello (vedi sezione Pannello dei punti di controllo)</li>
+            <li><strong>Solo per le B-Spline</strong>: modificando il valore di uno dei nodi della curva utilizzando il pannello corrispondente</li>
+            </ul>
 
-<h2>Menu a pannelli</h2>
+            <p>
+            Lo spostamento dei punti di controllo modificherà automaticamente il poligono di controllo e dunque la curva risultante.
+            </p>
 
-<h3>Curvatura e torsione</h3>
-<img src="Immagini/Pannello curvatura torsione in azione.png">
+            <p>
+            <strong>Per le B-Spline:</strong> lo spostamento dei nodi modificherà autonomamente il poligono di Bezier sotteso e dunque la curva risultante.
+            </p>
 
-<h3>Punti di controllo</h3>
-<img src="Immagini/Pannello punti di controllo.png">
+            <h3>Analisi della curva</h3>
 
-<h3>Nodi (B-Spline)</h3>
-<img src="Immagini/Pannello nodi.png">
+            <p>
+            La curva presente a schermo può essere analizzata utilizzando i pannelli presenti nel menu a destra di ogni ambiente di creazione. Per maggiori dettagli leggere la sezione Menu a pannelli.
+            </p>
 
-<h3>Dominio curva</h3>
-<img src="Immagini/Pannello info.png">
+            <h2>Spazio 3D</h2>
 
-<div class="nota">
-  I numeri decimali vanno inseriti con la virgola (,).
-</div>
+            <img src="Immagini/Curva.png" alt="curva">
 
-<h3>Bottone ritorno</h3>
-<img src="Immagini/Bottone back.png">
+            <p>
+            Lo spazio 3D posizionato sul lato sinistro di ogni ambiente di creazione conterrà la visualizzazione della curva prescelta:
+            </p>
 
-</div>
+            <ul>
+            <li>Pallini bianchi: punti di controllo della curva</li>
+            <li>Segmenti rossi: poligono di controllo</li>
+            <li>Linea bianca: curva risultante</li>
+            <li>Pallino giallo: punto della curva selezionato</li>
+            </ul>
 
-</body>
+            <img src="Immagini/CurvaBspline.png" alt="bspline">
+
+            <p><strong>Solo per B-Spline:</strong></p>
+
+            <ul>
+            <li>Linee blu: poligono di controllo di Bezier</li>
+            <li>Trattini verdi: punti di controllo di Bezier</li>
+            </ul>
+
+            <h2>Menu a pannelli</h2>
+
+            <h3>Pannello di curvatura e torsione</h3>
+
+            <img src="Immagini/Pannello curvatura torsione in azione.png">
+
+            <p>
+            Questo pannello permette di visualizzare i grafici di curvatura e torsione per ogni punto della curva.
+            </p>
+
+            <h3>Pannello dei punti di controllo</h3>
+
+            <img src="Immagini/Pannello punti di controllo.png">
+
+            <p>
+            Permette di creare o modificare le coordinate XYZ dei punti di controllo.
+            </p>
+
+            <p><strong>Nota bene</strong>: numeri con la virgola (,) e precisione centesimi.</p>
+
+            <h3>Pannello dei nodi</h3>
+
+            <img src="Immagini/Pannello nodi.png">
+
+            <p>
+            Presente solo per B-Spline, permette di modificare i nodi della curva.
+            </p>
+
+            <p><strong>Nota bene</strong>: vincoli di monotonia sui nodi.</p>
+
+            <h3>Pannello del dominio della curva</h3>
+
+            <img src="Immagini/Pannello info.png">
+            <img src="Immagini/Pannello dominio.png">
+
+            <p>
+            Permette di analizzare un punto della curva lungo il dominio.
+            </p>
+
+            <img src="Immagini/Parametrotspline.png">
+
+            <p><strong>Solo per B-Spline:</strong> indicatori dei nodi sul dominio.</p>
+
+            <h3>Bottone di ritorno</h3>
+
+            <img src="Immagini/Bottone back.png">
+
+            <p>
+            Permette di tornare al menu principale.
+            </p>
+
+        </div>
+
+    </body>
 </html>
