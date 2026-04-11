@@ -5,20 +5,57 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Manuale utente</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <style>
+            body {
+                background-color: #f8f9fa;
+            }
+
+            h1, h2, h3 {
+                margin-top: 30px;
+                margin-bottom: 15px;
+            }
+
+            .container {
+                background: white;
+                padding: 30px;
+                border-radius: 12px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            img {
+                border-radius: 10px;
+            }
+
+            .navbar {
+                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            }
+
+            .section {
+                margin-bottom: 40px;
+            }
+        </style>
     </head>
 
     <body>
 
-        <nav class="navbar navbar-dark bg-dark px-3">
-            <a class="navbar-brand" href="index.html">Home</a>
-            <a class="navbar-brand" href="manualeutente.html">Manuale utente</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Curve 3D</a>
+
+                <div>
+                <a class="nav-link d-inline text-white" href="index.html">Home</a>
+                <a class="nav-link d-inline text-white" href="manualeutente.html">Manuale</a>
+                </div>
+            </div>
         </nav>
         <div class="container">
 
             <h1>Manuale utente</h1>
 
             <h2>Menu principale</h2>
-            <div class="row align-items-start">
+            <div class="row align-items-start section">
                 <div class="col-md-7">
                     <p>All'avvio l'applicazione presenta un menu con tre opzioni possibili di creazione di curve:</p>
 
@@ -31,12 +68,12 @@
                 </div>
 
                  <div class="col-md-5 text-center">
-                    <img src="Immagini/Menu.png" class="img-fluid", style="max-width:200px;">
+                    <img src="Immagini/Menu.png" class="img-fluid shadow", style="max-width:200px;">
                 </div>
             </div>
 
             <h2>Ambienti di creazione</h2>
-            <div class="row align-items-start">
+            <div class="row align-items-start section">
                 <div class="col-md-7">
                     <p> Tutti e tre i possibili ambienti di creazione si presentano con un menu a pannelli a destra contente i dati della curva e uno spazio 3D a sinistra contenente la curva ed evidenziato dal sistema di riferimento indicato come segue: </p>
 
@@ -52,12 +89,12 @@
                     <p>In queste interfacce sarà possibile svolgere quattro operazioni principali.</p>
                 </div>
                 <div class="col-md-5 text-center">
-                    <img src="Immagini/Schermata1.png" class="img-fluid" style="max-width:200px;">
+                    <img src="Immagini/Schermata1.png" class="img-fluid shadow" style="max-width:300px;">
                 </div>
             </div>
 
             <h3>Creazione della curva</h3>
-            <div class="row align-items-start">
+            <div class="row align-items-start section">
                 <p>All’apertura di un ambiente di creazione la curva può essere creata posizionando i punti di controllo del poligono (4 per le Bezier di grado 3, 5 per le Bezier di grado 4, 7 per le B-Spline) nello spazio 3D (vedi sezione Spazio 3D).</p>
 
                 <p>Sarà possibile eseguire questa operazione in due modi:</p>
@@ -71,7 +108,7 @@
             </div>
 
             <h3>Visualizzazione della curva</h3>
-            <div class="row align-items-start">
+            <div class="row align-items-start section">
                 <p>Alla creazione della curva, la telecamera punterà sempre al centro di essa. Per visualizzarla da diverse angolazioni:</p>
 
                 <ul>
@@ -85,7 +122,7 @@
             </div>
 
             <h3>Modifica della curva</h3>
-            <div class="row align-items-start">
+            <div class="row align-items-start section">
                 <p>
                 Una volta creata, la curva potrà essere modificata agendo in tre modi distinti:
                 </p>
@@ -106,14 +143,14 @@
             </div>
 
             <h3>Analisi della curva</h3>
-            <div class="row align-items-start">
+            <div class="row align-items-start section">
                 <p>
                 La curva presente a schermo può essere analizzata utilizzando i pannelli presenti nel menu a destra di ogni ambiente di creazione. Per maggiori dettagli leggere la sezione Menu a pannelli.
                 </p>
             
             <h2>Spazio 3D</h2>
 
-            <div class="row align-items-start">
+            <div class="row align-items-start section">
                 <div class="col-md-7">
                     <p>
                     Lo spazio 3D posizionato sul lato sinistro di ogni ambiente di creazione conterrà la visualizzazione della curva prescelta:
@@ -127,11 +164,11 @@
                     </ul>
                 </div>
                 <div class="col-md-5 text-center">
-                    <img src="Immagini/Curva.png" class="img-fluid" style="max-width:200px;">
+                    <img src="Immagini/Curva.png" class="img-fluid shadow" style="max-width:200px;">
                 </div>
             </div>
 
-            <div class="row align-items-start">
+            <div class="row align-items-start section">
                 <div class="col-md-7">
                     <p><strong>Solo per B-Spline:</strong></p>
 
@@ -141,7 +178,7 @@
                     </ul>
                 </div>
                 <div class="col-md-5 text-center">
-                    <img src="Immagini/CurvaBspline.png" class="img-fluid" style="max-width:200px;">
+                    <img src="Immagini/CurvaBspline.png" class="img-fluid shadow" style="max-width:200px;">
                 </div>
             </div>
 
@@ -149,20 +186,20 @@
 
             <h3>Pannello di curvatura e torsione</h3>
 
-            <div class="row align-items-start">
+            <div class="row align-items-start section">
                 <div class="col-md-7">
                     <p>
                     Questo pannello permette di visualizzare i grafici di curvatura e torsione per ogni punto della curva.
                     </p>
                 </div>
                 <div class="col-md-5 text-center">
-                    <img src="Immagini/Pannello curvatura torsione in azione.png" class="img-fluid" style="max-width:200px;">
+                    <img src="Immagini/Pannello curvatura torsione in azione.png" class="img-fluid shadow" style="max-width:200px;">
                 </div>
             </div>
 
             <h3>Pannello dei punti di controllo</h3>
 
-            <div class="row align-items-start">
+            <div class="row align-items-start section">
                 <div class="col-md-7">
                     <p>
                     Permette di creare o modificare le coordinate XYZ dei punti di controllo.
@@ -171,13 +208,13 @@
                     <p><strong>Nota bene</strong>: numeri con la virgola (,) e precisione centesimi.</p>
                 </div>
                 <div class="col-md-5 text-center">
-                    <img src="Immagini/Pannello punti di controllo.png" class="img-fluid" style="max-width:200px;">
+                    <img src="Immagini/Pannello punti di controllo.png" class="img-fluid shadow" style="max-width:150px;">
                 </div>
             </div>
 
             <h3>Pannello dei nodi</h3>
 
-            <div class="row align-items-start">
+            <div class="row align-items-start section">
                  <div class="col-md-7">
                     <p>
                     Presente solo per B-Spline, permette di modificare i nodi della curva.
@@ -187,13 +224,13 @@
                 </div>
 
                 <div class="col-md-5 text-center">
-                    <img src="Immagini/Pannello nodi.png" class="img-fluid" style="max-width:200px;">
+                    <img src="Immagini/Pannello nodi.png" class="img-fluid shadow" style="max-width:200px;">
                 </div>
             </div>
 
             <h3>Pannello del dominio della curva</h3>
 
-            <div class="row align-items-start">
+            <div class="row align-items-start section">
                 <div class="col-md-7">
                     <p>
                     Permette di analizzare un punto della curva lungo il dominio.
@@ -202,22 +239,22 @@
                     <p><strong>Solo per B-Spline:</strong> indicatori dei nodi sul dominio.</p>
                 </div>
                 <div class="col-md-5 text-center">
-                    <img src="Immagini/Pannello info.png" class="img-fluid" style="max-width:200px;">
-                    <img src="Immagini/Pannello dominio.png" class="img-fluid" style="max-width:200px;">
-                    <img src="Immagini/Parametrotspline.png" class="img-fluid" style="max-width:200px;">
+                    <img src="Immagini/Pannello info.png" class="img-fluid shadow" style="max-width:200px;">
+                    <img src="Immagini/Pannello dominio.png" class="img-fluid shadow" style="max-width:200px;">
+                    <img src="Immagini/Parametrotspline.png" class="img-fluid shadow" style="max-width:200px;">
                 </div>
             </div>
 
             <h3>Bottone di ritorno</h3>
 
-            <div class="row align-items-start">
+            <div class="row align-items-start section">
                 <div class="col-md-7">
                     <p>
                     Permette di tornare al menu principale.
                     </p>
                 </div>
                 <div class="col-md-5 text-center">
-                    <img src="Immagini/Bottone back.png" class="img-fluid", style="max-width:200px;">
+                    <img src="Immagini/Bottone back.png" class="img-fluid shadow", style="max-width:200px;">
                 </div>
             </div>
         </div>
