@@ -4,49 +4,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Manuale utente</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-        <style>
-            body {
-                background-color: #f8f9fa;
-            }
-
-            h1, h2, h3 {
-                margin-top: 30px;
-                margin-bottom: 15px;
-            }
-
-            .container {
-                background: white;
-                padding: 30px;
-                border-radius: 12px;
-                margin-top: 30px;
-                margin-bottom: 30px;
-            }
-
-            img {
-                border-radius: 10px;
-            }
-
-            .navbar {
-                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-            }
-
-            .section {
-                margin-bottom: 40px;
-            }
-        </style>
+         <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap Icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Curve 3D</a>
-
-                <div>
-                <a class="nav-link d-inline text-white" href="index.html">Home</a>
-                <a class="nav-link d-inline text-white" href="manualeutente.html">Manuale</a>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Home</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#manualeutente">Manuale Utente</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#teoria">Teoria</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -188,9 +169,8 @@
 
             <div class="row align-items-start section">
                 <div class="col-md-7">
-                    <p>
-                    Questo pannello permette di visualizzare i grafici di curvatura e torsione per ogni punto della curva.
-                    </p>
+                    <p> Questo pannello permette di visualizzare, successivamente alla creazione della curva, i grafici di curvatura e torsione per ogni punto della curva lungo il suo dominio. Sull’asse Y sono presenti le etichette dei valori minimo (in basso) e massimo (in alto) dei rispettivi grafici. </p>
+                    <p> La linea rossa rappresenta la corrispondenza con un punto specifico del dominio. </p>
                 </div>
                 <div class="col-md-5 text-center">
                     <img src="Immagini/Pannello curvatura torsione in azione.png" class="img-fluid shadow" style="max-width:200px;">
@@ -201,11 +181,9 @@
 
             <div class="row align-items-start section">
                 <div class="col-md-7">
-                    <p>
-                    Permette di creare o modificare le coordinate XYZ dei punti di controllo.
-                    </p>
+                    <p> Questo pannello permette di creare (se non sono ancora stati creati) i punti di controllo o modificarne le coordinate XYZ (se già presenti), cliccando sulla corrispondente casella e inserendo un valore numerico. </p>
 
-                    <p><strong>Nota bene</strong>: numeri con la virgola (,) e precisione centesimi.</p>
+                    <p><strong>Nota bene</strong>: l’approssimazione dei valori da inserire nella caselle è in centesimi e i numeri decimali vanno inseriti con la , e non con il .</p>
                 </div>
                 <div class="col-md-5 text-center">
                     <img src="Immagini/Pannello punti di controllo.png" class="img-fluid shadow" style="max-width:150px;">
@@ -216,11 +194,10 @@
 
             <div class="row align-items-start section">
                  <div class="col-md-7">
-                    <p>
-                    Presente solo per B-Spline, permette di modificare i nodi della curva.
-                    </p>
+                    <p> Presente solo nell’ambiente delle B-Spline, questo pannello permette di modificare la posizione dei nodi della curva sul dominio. Tenendo premuto con il tasto sinistro del mouse sul pallino dello slider e trascinando a destra e sinistra oppure inserendo un valore specifico nella casella a lato è possibile modificare la posizione del corrispondente nodo sul dominio. </p>
 
-                    <p><strong>Nota bene</strong>: vincoli di monotonia sui nodi.</p>
+                    <p><strong>Nota bene</strong>: per rispettare la coerenza matematica i nodi u3 e u7 non sono interagibili ma sono comunque mostrati per chiarezza di lettura. Inoltre il valore del nodo selezionato non potrà mai diventare minore di quello del nodo precedente o maggiore di quello successivo, o uguale ad entrambi.</p>
+                    <p><strong>Nota bene</strong>: l’approssimazione dei valori da inserire nella caselle è in centesimi e i numeri decimali vanno inseriti con la , e non con il .</p>
                 </div>
 
                 <div class="col-md-5 text-center">
@@ -232,11 +209,21 @@
 
             <div class="row align-items-start section">
                 <div class="col-md-7">
-                    <p>
-                    Permette di analizzare un punto della curva lungo il dominio.
-                    </p>
-
-                    <p><strong>Solo per B-Spline:</strong> indicatori dei nodi sul dominio.</p>
+                    <p> Questo pannello ti permette di indagare un valore specifico della curva secondo il dominio. Tenendo premuto con il tasto sinistro del mouse sul pallino dello slider e trascinando a destra e sinistra, oppure inserendo un valore specifico della casella a lato è possibile scorrere lungo il dominio della curva. Una volta scelto un valore del dominio nel pannello sovrastante verranno mostrati rispettivamente: </p>
+                    <ul>
+                        <li>Le coordinate XYZ del punto della curva corrispondente (identificato anche sulla curva dal pallino giallo, vedi sezione Spazio 3D)</li>
+                        <li>Il valore di curvatura nel punto (identificato anche sul grafico dalla linea rossa vedi sezione Pannello di curvatura e torsione)</li>
+                        <li>Il valore di torsione nel punto (identificabile anche sul grafico dalla linea rossa, vedi sezione Pannello di curvatura e torsione)</li>
+                    </ul>
+                    <p><strong>Solo per B-Spline:</strong> sullo slider sono presenti anche 5 barrette verticali (presenti a scopi di visualizzazione e non interagibili) raffiguranti la posizione dei 5 nodi della curva sul dominio. Al variare dei nodi varierà anche la posizione di queste barrette. La corrispondenza tra nodi e barrette è data dal color coding:</p>
+                    <ul>
+                        <li>Rosso: u3</li>
+                        <li>Verde: u4</li>
+                        <li>BLu: u5</li>
+                        <li>Giallo: u6</li>
+                        <li>Viola: u7</li>
+                    </ul>
+                    <p><strong>Nota bene</strong>: l’approssimazione dei valori da inserire nella caselle è in centesimi e i numeri decimali vanno inseriti con la , e non con il .</p>
                 </div>
                 <div class="col-md-5 text-center">
                     <img src="Immagini/Pannello info.png" class="img-fluid shadow" style="max-width:200px;">
@@ -249,15 +236,27 @@
 
             <div class="row align-items-start section">
                 <div class="col-md-7">
-                    <p>
-                    Permette di tornare al menu principale.
-                    </p>
+                    <p> Premendo questo bottone, presente in basso, sarà possibile tornare al menu principale di selezione della curva. </p>
                 </div>
                 <div class="col-md-5 text-center">
                     <img src="Immagini/Bottone back.png" class="img-fluid shadow", style="max-width:200px;">
                 </div>
             </div>
         </div>
-
+        <footer class="bg-light py-5">
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Creato da Laura Biscella</div></div>
+        </footer>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- SimpleLightbox plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
