@@ -1,262 +1,237 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Manuale utente</title>
-         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap Icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <!-- SimpleLightbox plugin CSS-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuale utente</title>
 
-    <body>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.html">Home</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="manualeutente.html">Manuale Utente</a></li>
-                        <li class="nav-item"><a class="nav-link" href="teoria.html">Teoria</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="container">
+    <!-- Tema -->
+    <link rel="stylesheet" href="css/styles.css">
 
-            <h1>Manuale utente</h1>
+    <!-- Fonts & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,700" rel="stylesheet">
+</head>
 
-            <h2>Menu principale</h2>
-            <div class="row align-items-start section">
-                <div class="col-md-7">
-                    <p>All'avvio l'applicazione presenta un menu con tre opzioni possibili di creazione di curve:</p>
+<body>
 
-                    <ul>
-                        <li>Curva di Bezier di grado 3 (Bottone k = 3)</li>
-                        <li>Curva di Bezier di grado 4 (Bottone k = 4)</li>
-                        <li>Curva B-Spline di grado 3 con quattro incollamenti di curve di Bezier (Bottone k = 3 l = 4)</li>
-                    </ul>
-                    <p>Per selezionare il tipo di curva desiderata cliccare sul bottone corrispondente.</p>
-                </div>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 bg-white shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Curve 3D</a>
 
-                 <div class="col-md-5 text-center">
-                    <img src="Immagini/Menu.png" class="img-fluid shadow", style="max-width:200px;">
-                </div>
-            </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <h2>Ambienti di creazione</h2>
-            <div class="row align-items-start section">
-                <div class="col-md-7">
-                    <p> Tutti e tre i possibili ambienti di creazione si presentano con un menu a pannelli a destra contente i dati della curva e uno spazio 3D a sinistra contenente la curva ed evidenziato dal sistema di riferimento indicato come segue: </p>
-
-                    <ul>
-                    <li>Asse X in rosso</li>
-                    <li>Asse Y in verde</li>
-                    <li>Asse Z in blu</li>
-                    <li>Origine: pallino bianco</li>
-                    </ul>
-
-                    <p><strong>Nota bene</strong>: la sezione di asse positiva ha un colore più brillante rispetto a quella negativa.</p>
-
-                    <p>In queste interfacce sarà possibile svolgere quattro operazioni principali.</p>
-                </div>
-                <div class="col-md-5 text-center">
-                    <img src="Immagini/Schermata1.png" class="img-fluid shadow" style="max-width:300px;">
-                </div>
-            </div>
-
-            <h3>Creazione della curva</h3>
-            <div class="row align-items-start section">
-                <p>All’apertura di un ambiente di creazione la curva può essere creata posizionando i punti di controllo del poligono (4 per le Bezier di grado 3, 5 per le Bezier di grado 4, 7 per le B-Spline) nello spazio 3D (vedi sezione Spazio 3D).</p>
-
-                <p>Sarà possibile eseguire questa operazione in due modi:</p>
-
-                <ul>
-                <li>Cliccando con il tasto sinistro del mouse in un punto dello spazio 3D</li>
-                <li>Digitando le coordinate XYZ per ogni punto di controllo nel pannello corrispondente (vedi sezione Pannello dei punti di controllo)</li>
-                </ul>
-
-                <p>La curva di creerà autonomamente sulla base dei punti di controllo generati.</p>
-            </div>
-
-            <h3>Visualizzazione della curva</h3>
-            <div class="row align-items-start section">
-                <p>Alla creazione della curva, la telecamera punterà sempre al centro di essa. Per visualizzarla da diverse angolazioni:</p>
-
-                <ul>
-                <li>Premendo A per ruotare verso sinistra</li>
-                <li>Premendo D per ruotare verso destra</li>
-                <li>Premendo W per ruotare verso l'alto</li>
-                <li>Premendo S per ruotare verso il basso</li>
-                <li>Scorrendo la rotella del mouse in avanti per avvicinarsi</li>
-                <li>Scorrendo la rotella del mouse indietro per allontanarsi</li>
-                </ul>
-            </div>
-
-            <h3>Modifica della curva</h3>
-            <div class="row align-items-start section">
-                <p>
-                Una volta creata, la curva potrà essere modificata agendo in tre modi distinti:
-                </p>
-
-                <ul>
-                <li>Tenendo premuto con il tasto sinistro del mouse su un punto di controllo questo può essere trascinato in un punto a piacere dello spazio.</li>
-                <li>Inserendo un valore specifico per le coordinate X, Y o Z di un punto di controllo nel pannello (vedi sezione Pannello dei punti di controllo)</li>
-                <li><strong>Solo per le B-Spline</strong>: modificando il valore di uno dei nodi della curva utilizzando il pannello corrispondente</li>
-                </ul>
-
-                <p>
-                Lo spostamento dei punti di controllo modificherà automaticamente il poligono di controllo e dunque la curva risultante.
-                </p>
-
-                <p>
-                <strong>Per le B-Spline:</strong> lo spostamento dei nodi modificherà autonomamente il poligono di Bezier sotteso e dunque la curva risultante.
-                </p>
-            </div>
-
-            <h3>Analisi della curva</h3>
-            <div class="row align-items-start section">
-                <p>
-                La curva presente a schermo può essere analizzata utilizzando i pannelli presenti nel menu a destra di ogni ambiente di creazione. Per maggiori dettagli leggere la sezione Menu a pannelli.
-                </p>
-            
-            <h2>Spazio 3D</h2>
-
-            <div class="row align-items-start section">
-                <div class="col-md-7">
-                    <p>
-                    Lo spazio 3D posizionato sul lato sinistro di ogni ambiente di creazione conterrà la visualizzazione della curva prescelta:
-                    </p>
-
-                    <ul>
-                    <li>Pallini bianchi: punti di controllo della curva</li>
-                    <li>Segmenti rossi: poligono di controllo</li>
-                    <li>Linea bianca: curva risultante</li>
-                    <li>Pallino giallo: punto della curva selezionato</li>
-                    </ul>
-                </div>
-                <div class="col-md-5 text-center">
-                    <img src="Immagini/Curva.png" class="img-fluid shadow" style="max-width:200px;">
-                </div>
-            </div>
-
-            <div class="row align-items-start section">
-                <div class="col-md-7">
-                    <p><strong>Solo per B-Spline:</strong></p>
-
-                    <ul>
-                    <li>Linee blu: poligono di controllo di Bezier</li>
-                    <li>Trattini verdi: punti di controllo di Bezier</li>
-                    </ul>
-                </div>
-                <div class="col-md-5 text-center">
-                    <img src="Immagini/CurvaBspline.png" class="img-fluid shadow" style="max-width:200px;">
-                </div>
-            </div>
-
-            <h2>Menu a pannelli</h2>
-
-            <h3>Pannello di curvatura e torsione</h3>
-
-            <div class="row align-items-start section">
-                <div class="col-md-7">
-                    <p> Questo pannello permette di visualizzare, successivamente alla creazione della curva, i grafici di curvatura e torsione per ogni punto della curva lungo il suo dominio. Sull’asse Y sono presenti le etichette dei valori minimo (in basso) e massimo (in alto) dei rispettivi grafici. </p>
-                    <p> La linea rossa rappresenta la corrispondenza con un punto specifico del dominio. </p>
-                </div>
-                <div class="col-md-5 text-center">
-                    <img src="Immagini/Pannello curvatura torsione in azione.png" class="img-fluid shadow" style="max-width:200px;">
-                </div>
-            </div>
-
-            <h3>Pannello dei punti di controllo</h3>
-
-            <div class="row align-items-start section">
-                <div class="col-md-7">
-                    <p> Questo pannello permette di creare (se non sono ancora stati creati) i punti di controllo o modificarne le coordinate XYZ (se già presenti), cliccando sulla corrispondente casella e inserendo un valore numerico. </p>
-
-                    <p><strong>Nota bene</strong>: l’approssimazione dei valori da inserire nella caselle è in centesimi e i numeri decimali vanno inseriti con la , e non con il .</p>
-                </div>
-                <div class="col-md-5 text-center">
-                    <img src="Immagini/Pannello punti di controllo.png" class="img-fluid shadow" style="max-width:150px;">
-                </div>
-            </div>
-
-            <h3>Pannello dei nodi</h3>
-
-            <div class="row align-items-start section">
-                 <div class="col-md-7">
-                    <p> Presente solo nell’ambiente delle B-Spline, questo pannello permette di modificare la posizione dei nodi della curva sul dominio. Tenendo premuto con il tasto sinistro del mouse sul pallino dello slider e trascinando a destra e sinistra oppure inserendo un valore specifico nella casella a lato è possibile modificare la posizione del corrispondente nodo sul dominio. </p>
-
-                    <p><strong>Nota bene</strong>: per rispettare la coerenza matematica i nodi u3 e u7 non sono interagibili ma sono comunque mostrati per chiarezza di lettura. Inoltre il valore del nodo selezionato non potrà mai diventare minore di quello del nodo precedente o maggiore di quello successivo, o uguale ad entrambi.</p>
-                    <p><strong>Nota bene</strong>: l’approssimazione dei valori da inserire nella caselle è in centesimi e i numeri decimali vanno inseriti con la , e non con il .</p>
-                </div>
-
-                <div class="col-md-5 text-center">
-                    <img src="Immagini/Pannello nodi.png" class="img-fluid shadow" style="max-width:200px;">
-                </div>
-            </div>
-
-            <h3>Pannello del dominio della curva</h3>
-
-            <div class="row align-items-start section">
-                <div class="col-md-7">
-                    <p> Questo pannello ti permette di indagare un valore specifico della curva secondo il dominio. Tenendo premuto con il tasto sinistro del mouse sul pallino dello slider e trascinando a destra e sinistra, oppure inserendo un valore specifico della casella a lato è possibile scorrere lungo il dominio della curva. Una volta scelto un valore del dominio nel pannello sovrastante verranno mostrati rispettivamente: </p>
-                    <ul>
-                        <li>Le coordinate XYZ del punto della curva corrispondente (identificato anche sulla curva dal pallino giallo, vedi sezione Spazio 3D)</li>
-                        <li>Il valore di curvatura nel punto (identificato anche sul grafico dalla linea rossa vedi sezione Pannello di curvatura e torsione)</li>
-                        <li>Il valore di torsione nel punto (identificabile anche sul grafico dalla linea rossa, vedi sezione Pannello di curvatura e torsione)</li>
-                    </ul>
-                    <p><strong>Solo per B-Spline:</strong> sullo slider sono presenti anche 5 barrette verticali (presenti a scopi di visualizzazione e non interagibili) raffiguranti la posizione dei 5 nodi della curva sul dominio. Al variare dei nodi varierà anche la posizione di queste barrette. La corrispondenza tra nodi e barrette è data dal color coding:</p>
-                    <ul>
-                        <li>Rosso: u3</li>
-                        <li>Verde: u4</li>
-                        <li>BLu: u5</li>
-                        <li>Giallo: u6</li>
-                        <li>Viola: u7</li>
-                    </ul>
-                    <p><strong>Nota bene</strong>: l’approssimazione dei valori da inserire nella caselle è in centesimi e i numeri decimali vanno inseriti con la , e non con il .</p>
-                </div>
-                <div class="col-md-5 text-center">
-                    <img src="Immagini/Pannello info.png" class="img-fluid shadow" style="max-width:200px;">
-                    <img src="Immagini/Pannello dominio.png" class="img-fluid shadow" style="max-width:200px;">
-                    <img src="Immagini/Parametrotspline.png" class="img-fluid shadow" style="max-width:200px;">
-                </div>
-            </div>
-
-            <h3>Bottone di ritorno</h3>
-
-            <div class="row align-items-start section">
-                <div class="col-md-7">
-                    <p> Premendo questo bottone, presente in basso, sarà possibile tornare al menu principale di selezione della curva. </p>
-                </div>
-                <div class="col-md-5 text-center">
-                    <img src="Immagini/Bottone back.png" class="img-fluid shadow", style="max-width:200px;">
-                </div>
-            </div>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="manualeutente.html">Manuale</a>
+                </li>
+            </ul>
         </div>
-        <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Creato da Laura Biscella</div></div>
-        </footer>
+    </div>
+</nav>
+
+<!-- CONTENUTO -->
+<div class="container" style="margin-top:100px;">
+
+<h1 class="mb-4">Manuale utente</h1>
+
+<!-- SEZIONE -->
+<h2>Menu principale</h2>
+<div class="row align-items-center mb-5">
+    <div class="col-md-7">
+        <p>All'avvio l'applicazione presenta un menu con tre opzioni possibili di creazione di curve:</p>
+            <ul>
+                <li>Curva di Bezier di grado 3 (Bottone k = 3)</li>
+                <li>Curva di Bezier di grado 4 (Bottone k = 4)</li>
+                <li>Curva B-Spline di grado 3 con quattro incollamenti di curve di Bezier (Bottone k = 3 l = 4)</li>
+            </ul>
+        <p>Per selezionare il tipo di curva desiderata cliccare sul bottone corrispondente.</p>
+    </div>
+    <div class="col-md-5 text-center">
+        <img src="Immagini/Menu.png" class="img-fluid rounded shadow" style="max-width:220px;">
+    </div>
+</div>
+
+<h2>Ambienti di creazione</h2>
+<div class="row align-items-center mb-5">
+    <div class="col-md-7">
+        <p> Tutti e tre i possibili ambienti di creazione si presentano con un menu a pannelli a destra contente i dati della curva e uno spazio 3D a sinistra contenente la curva ed evidenziato dal sistema di riferimento indicato come segue: </p>
+            <ul>
+                <li>Asse X in rosso</li>
+                <li>Asse Y in verde</li>
+                <li>Asse Z in blu</li>
+                <li>Origine: pallino bianco</li>
+            </ul>
+            <p><strong>Nota bene</strong>: la sezione di asse positiva ha un colore più brillante rispetto a quella negativa.</p>
+            <p>In queste interfacce sarà possibile svolgere quattro operazioni principali.</p>
+    </div>
+    <div class="col-md-5 text-center">
+        <img src="Immagini/Schermata1.png" class="img-fluid rounded shadow" style="max-width:280px;">
+    </div>
+</div>
+
+<h3>Creazione della curva</h3>
+<div class="row align-items-center mb-5">
+    <p>All’apertura di un ambiente di creazione la curva può essere creata posizionando i punti di controllo del poligono (4 per le Bezier di grado 3, 5 per le Bezier di grado 4, 7 per le B-Spline) nello spazio 3D (vedi sezione Spazio 3D).</p>
+
+    <p>Sarà possibile eseguire questa operazione in due modi:</p>
+
+    <ul>
+        <li>Cliccando con il tasto sinistro del mouse in un punto dello spazio 3D</li>
+        <li>Digitando le coordinate XYZ per ogni punto di controllo nel pannello corrispondente (vedi sezione Pannello dei punti di controllo)</li>
+    </ul>
+
+    <p>La curva di creerà autonomamente sulla base dei punti di controllo generati.</p>
+</div>
+
+<h3>Visualizzazione della curva</h3>
+<div class="row align-items-center mb-5">
+    <p>Alla creazione della curva, la telecamera punterà sempre al centro di essa. Per visualizzarla da diverse angolazioni:</p>
+
+    <ul>
+        <li>Premendo A per ruotare verso sinistra</li>
+        <li>Premendo D per ruotare verso destra</li>
+        <li>Premendo W per ruotare verso l'alto</li>
+        <li>Premendo S per ruotare verso il basso</li>
+        <li>Scorrendo la rotella del mouse in avanti per avvicinarsi</li>
+        <li>Scorrendo la rotella del mouse indietro per allontanarsi</li>
+    </ul>
+</div>
+
+<h3>Modifica della curva</h3>
+<div class="row align-items-center mb-5">
+    <p>Una volta creata, la curva potrà essere modificata agendo in tre modi distinti:</p>
+
+    <ul>
+        <li>Tenendo premuto con il tasto sinistro del mouse su un punto di controllo questo può essere trascinato in un punto a piacere dello spazio.</li>
+        <li>Inserendo un valore specifico per le coordinate X, Y o Z di un punto di controllo nel pannello (vedi sezione Pannello dei punti di controllo)</li>
+        <li><strong>Solo per le B-Spline</strong>: modificando il valore di uno dei nodi della curva utilizzando il pannello corrispondente</li>
+    </ul>
+
+    <p>Lo spostamento dei punti di controllo modificherà automaticamente il poligono di controllo e dunque la curva risultante.</p>
+    <p><strong>Per le B-Spline:</strong> lo spostamento dei nodi modificherà autonomamente il poligono di Bezier sotteso e dunque la curva risultante.</p>
+</div>
+
+<h3>Analisi della curva</h3>
+<div class="row align-items-center mb-5">
+    <p>La curva presente a schermo può essere analizzata utilizzando i pannelli presenti nel menu a destra di ogni ambiente di creazione. Per maggiori dettagli leggere la sezione Menu a pannelli.</p>
+</div>
+
+<h3>Spazio 3D</h3>
+<div class="row align-items-center mb-5">
+    <div class="col-md-7">
+        <p>Lo spazio 3D posizionato sul lato sinistro di ogni ambiente di creazione conterrà la visualizzazione della curva prescelta:</p>
+        <ul>
+            <li>Pallini bianchi: punti di controllo</li>
+            <li>Segmenti rossi: poligono di controllo</li>
+            <li>Linea bianca: curva risultante</li>
+            <li>Pallino giallo: punto della cruva selezionato</li>
+        </ul>
+        <p><strong>Solo B-Spline</strong></p>
+        <ul>
+            <li>Linee blu: poligono di controllo di Bezier</li>
+            <li>Trattini verdi: punti di controllo di Bezier</li>
+        </ul>
+    </div>
+    <div class="col-md-5 text-center">
+        <img src="Immagini/Curva.png" class="img-fluid rounded shadow" style="max-width:220px;">
+        <img src="Immagini/CurvaBspline.png" class="img-fluid rounded shadow" style="max-width:220px;">
+    </div>
+</div>
+
+<h2>Menu a pannelli</h2>
+
+<h3>Pannello dei grafici di curvatura e torsione</h3>
+<div class="row align-items-center mb-5">
+    <div class="col-md-7">
+        <p> Questo pannello permette di visualizzare, successivamente alla creazione della curva, i grafici di curvatura e torsione per ogni punto della curva lungo il suo dominio. Sull’asse Y sono presenti le etichette dei valori minimo (in basso) e massimo (in alto) dei rispettivi grafici. </p>
+        <p> La linea rossa rappresenta la corrispondenza con un punto specifico del dominio. </p>
+    </div>
+    <div class="col-md-5 text-center">
+        <img src="Immagini/Pannello curvatura torsione in azione.png" class="img-fluid rounded shadow" style="max-width:220px;">
+    </div>
+</div>
+
+<h3>Pannello dei punti di controllo</h3>
+<div class="row align-items-center mb-5">
+    <div class="col-md-7">
+        <p> Questo pannello permette di creare (se non sono ancora stati creati) i punti di controllo o modificarne le coordinate XYZ (se già presenti), cliccando sulla corrispondente casella e inserendo un valore numerico. </p>
+        <p><strong>Nota bene</strong>: l’approssimazione dei valori da inserire nella caselle è in centesimi e i numeri decimali vanno inseriti con la , e non con il .</p>
+    </div>
+    <div class="col-md-5 text-center">
+        <img src="Immagini/Pannello punti di controllo.png" class="img-fluid rounded shadow" style="max-width:180px;">
+    </div>
+</div>
+
+<h3>Pannello dei nodi della B-Spline</h3>
+<div class="row align-items-center mb-5">
+    <div class="col-md-7">
+        <p> Presente solo nell’ambiente delle B-Spline, questo pannello permette di modificare la posizione dei nodi della curva sul dominio. Tenendo premuto con il tasto sinistro del mouse sul pallino dello slider e trascinando a destra e sinistra oppure inserendo un valore specifico nella casella a lato è possibile modificare la posizione del corrispondente nodo sul dominio. </p>
+        <p><strong>Nota bene</strong>: per rispettare la coerenza matematica i nodi u3 e u7 non sono interagibili ma sono comunque mostrati per chiarezza di lettura. Inoltre il valore del nodo selezionato non potrà mai diventare minore di quello del nodo precedente o maggiore di quello successivo, o uguale ad entrambi.</p>
+        <p><strong>Nota bene</strong>: l’approssimazione dei valori da inserire nella caselle è in centesimi e i numeri decimali vanno inseriti con la , e non con il .</p>
+    </div>
+    <div class="col-md-5 text-center">
+        <img src="Immagini/Pannello nodi.png" class="img-fluid rounded shadow" style="max-width:220px;">
+    </div>
+</div>
+
+<h3>Pannello del dominio della curva</h3>
+<div class="row align-items-center mb-5">
+    <div class="col-md-7">
+        <p> Questo pannello ti permette di indagare un valore specifico della curva secondo il dominio. Tenendo premuto con il tasto sinistro del mouse sul pallino dello slider e trascinando a destra e sinistra, oppure inserendo un valore specifico della casella a lato è possibile scorrere lungo il dominio della curva. Una volta scelto un valore del dominio nel pannello sovrastante verranno mostrati rispettivamente: </p>
+        <ul>
+            <li>Le coordinate XYZ del punto della curva corrispondente (identificato anche sulla curva dal pallino giallo, vedi sezione Spazio 3D)</li>
+            <li>Il valore di curvatura nel punto (identificato anche sul grafico dalla linea rossa vedi sezione Pannello di curvatura e torsione)</li>
+            <li>Il valore di torsione nel punto (identificabile anche sul grafico dalla linea rossa, vedi sezione Pannello di curvatura e torsione)</li>
+        </ul>
+        <p><strong>Solo per B-Spline:</strong> sullo slider sono presenti anche 5 barrette verticali (presenti a scopi di visualizzazione e non interagibili) raffiguranti la posizione dei 5 nodi della curva sul dominio. Al variare dei nodi varierà anche la posizione di queste barrette. La corrispondenza tra nodi e barrette è data dal color coding:</p>
+        <ul>
+            <li>Rosso: u3</li>
+            <li>Verde: u4</li>
+            <li>BLu: u5</li>
+            <li>Giallo: u6</li>
+            <li>Viola: u7</li>
+        </ul>
+        <p><strong>Nota bene</strong>: l’approssimazione dei valori da inserire nella caselle è in centesimi e i numeri decimali vanno inseriti con la , e non con il .</p>
+    </div>
+    <div class="col-md-5 text-center">
+        <img src="Immagini/Pannello info.png" class="img-fluid rounded shadow mb-2" style="max-width:200px;">
+        <img src="Immagini/Pannello dominio.png" class="img-fluid rounded shadow mb-2" style="max-width:200px;">
+        <img src="Immagini/Parametrotspline.png" class="img-fluid rounded shadow" style="max-width:200px;">
+    </div>
+</div>
+
+<h3>Bottone di ritorno</h3>
+<div class="row align-items-center mb-5">
+    <div class="col-md-7">
+        <p> Premendo questo bottone, presente in basso, sarà possibile tornare al menu principale di selezione della curva. </p>
+    </div>
+    <div class="col-md-5 text-center">
+        <img src="Immagini/Bottone back.png" class="img-fluid rounded shadow" style="max-width:200px;">
+    </div>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-light py-4">
+    <div class="container text-center">
+        <div class="small text-muted">
+            Creato da Laura Biscella
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- SimpleLightbox plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+    </div>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
