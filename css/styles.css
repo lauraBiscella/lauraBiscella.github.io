@@ -10993,3 +10993,77 @@ header.masthead h1, header.masthead .h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
+/* ===== DARK MODE ===== */
+
+body {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+/* Navbar */
+#mainNav {
+  background-color: transparent;
+}
+
+#mainNav.navbar-shrink {
+  background-color: #1e1e1e !important;
+}
+
+/* Testi navbar */
+#mainNav .nav-link {
+  color: #ffffff !important;
+}
+
+#mainNav .nav-link:hover {
+  color: #bbbbbb !important;
+}
+
+/* Hero section */
+.masthead {
+  background: linear-gradient(rgba(18,18,18,0.9), rgba(18,18,18,0.9)),
+              url("../assets/img/bg-masthead.jpg");
+  background-color: #121212 !important;
+}
+
+/* Divider */
+.divider {
+  border-top: 3px solid #1a2a5c !important;
+}
+
+/* Bottone */
+.btn-primary {
+  background-color: #1a2a5c !important;
+  border-color: #1a2a5c !important;
+}
+
+.btn-primary:hover {
+  background-color: #0f1a3d !important;
+  border-color: #0f1a3d !important;
+}
+
+/* Footer */
+footer {
+  background-color: #1e1e1e !important;
+}
+
+footer .text-muted {
+  color: #aaaaaa !important;
+}
+
+/* Testi secondari */
+.text-white-75 {
+  color: rgba(200, 200, 200, 0.8) !important;
+}
+
+/* Link */
+a {
+  color: #4dabf7;
+}
+
+a:hover {
+  color: #74c0fc;
+}
+/* Leggero glow sui bottoni */
+.btn-primary {
+  box-shadow: 0 0 10px rgba(26, 42, 92, 0.5);
+}
