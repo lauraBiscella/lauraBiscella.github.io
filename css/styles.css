@@ -11057,3 +11057,17 @@ footer .text-muted {
   background-color: #0f1a3d !important;
   border-color: #0f1a3d !important;
 }
+/* NAVBAR SEMPRE SCURA */
+#mainNav {
+  background-color: #1e1e1e !important;
+}
+
+/* disattiva effetto bianco */
+#mainNav.navbar-shrink {
+  background-color: #1e1e1e !important;
+}
+
+/* forza rimozione stile bootstrap */
+.navbar-light {
+  background-color: #1e1e1e !important;
+}
