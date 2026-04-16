@@ -11071,3 +11071,8 @@ footer .text-muted {
 .navbar-light {
   background-color: #1e1e1e !important;
 }
+
+#sidebar .nav-link {
+    font-size: 0.82rem;
+    padding: 4px 6px;
+}
