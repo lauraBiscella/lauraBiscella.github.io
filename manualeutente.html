@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,700" rel="stylesheet">
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#sidebar" data-bs-offset="100" tabindex="0">
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3" id="mainNav">
     <div class="container px-4 px-lg-5">
@@ -107,7 +107,7 @@
 
                 <ul>
                     <li>Cliccando con il mouse in un punto dello spazio 3D</li>
-                    <li>Digitando le coordinate XYZ per ogni punto di controllo nel pannello corrispondente (vedi sezione <a class="nav-link" href="#punti-controllo">Pannello dei punti di controllo</a>)</li>
+                    <li>Digitando le coordinate XYZ per ogni punto di controllo nel pannello corrispondente (vedi sezione <a href="#punti-controllo" class="text-primary text-decoration-underline">Pannello dei punti di controllo</a>)</li>
                 </ul>
 
                 <p>La curva di creerà autonomamente sulla base dei punti di controllo generati.</p>
@@ -137,7 +137,7 @@
 
                 <ul>
                     <li>Tenendo premuto con il mouse su un punto di controllo questo può essere trascinato in un punto a piacere dello spazio.</li>
-                    <li>Inserendo un valore specifico per le coordinate X, Y o Z di un punto di controllo nel pannello (vedi sezione <a class="nav-link" href="#punti-controllo">Pannello dei punti di controllo</a>)</li>
+                    <li>Inserendo un valore specifico per le coordinate X, Y o Z di un punto di controllo nel pannello (vedi sezione <a class="text-primary text-decoration-underline" href="#punti-controllo">Pannello dei punti di controllo</a>)</li>
                     <li><strong>Solo per le B-Spline</strong>: modificando il valore di uno dei nodi della curva utilizzando il pannello corrispondente</li>
                 </ul>
 
@@ -221,9 +221,9 @@
             <div class="col-md-7">
                 <p> Questo pannello ti permette di indagare un valore specifico della curva secondo il dominio. Tenendo premuto con il tasto sinistro del mouse sul pallino dello slider e trascinando a destra e sinistra, oppure inserendo un valore specifico della casella a lato è possibile scorrere lungo il dominio della curva. Una volta scelto un valore del dominio nel pannello sovrastante verranno mostrati rispettivamente: </p>
                 <ul>
-                    <li>Le coordinate XYZ del punto della curva corrispondente (identificato anche sulla curva dal pallino giallo, vedi sezione <a class="nav-link" href="#spazio-3d">Spazio 3D</a>)</li>
-                    <li>Il valore di curvatura nel punto (identificato anche sul grafico dalla linea rossa vedi sezione <a class="nav-link" href="#pannello-curvatura-torsione">Pannello di curvatura e torsione</a>)</li>
-                    <li>Il valore di torsione nel punto (identificabile anche sul grafico dalla linea rossa, vedi sezione <a class="nav-link" href="#pannello-curvatura-torsione">Pannello di curvatura e torsione</a>ne)</li>
+                    <li>Le coordinate XYZ del punto della curva corrispondente (identificato anche sulla curva dal pallino giallo, vedi sezione <a class="text-primary text-decoration-underline" href="#spazio-3d">Spazio 3D</a>)</li>
+                    <li>Il valore di curvatura nel punto (identificato anche sul grafico dalla linea rossa vedi sezione <a class="text-primary text-decoration-underline" href="#pannello-curvatura-torsione">Pannello di curvatura e torsione</a>)</li>
+                    <li>Il valore di torsione nel punto (identificabile anche sul grafico dalla linea rossa, vedi sezione <a class="text-primary text-decoration-underline" href="#pannello-curvatura-torsione">Pannello di curvatura e torsione</a>ne)</li>
                 </ul>
                 <p><strong>Solo per B-Spline:</strong> sullo slider sono presenti anche 5 barrette verticali (presenti a scopi di visualizzazione e non interagibili) raffiguranti la posizione dei 5 nodi della curva sul dominio. Al variare dei nodi varierà anche la posizione di queste barrette. La corrispondenza tra nodi e barrette è data dal color coding:</p>
                 <ul>
@@ -247,7 +247,7 @@
         <h3 id="bottone-piano-osculatore-binormale">Bottone di visualizzazione di piano osculatore e binormale</h3>
         <div class="row align-items-center mb-5">
             <div class="col-md-7">
-                <p> Premendo questo bottone sarà possibile attivare o disattivare la visibilità del piano osculatore e del vettore binormale nel punto selezionato dal pannello del dominio (vedi sezione <a class="nav-link" href="#punti-controllo">Pannello del dominio della curva</a>) </p>
+                <p> Premendo questo bottone sarà possibile attivare o disattivare la visibilità del piano osculatore e del vettore binormale nel punto selezionato dal pannello del dominio (vedi sezione <a class="text-primary text-decoration-underline" href="#punti-controllo">Pannello del dominio della curva</a>) </p>
             </div>
             <div class="col-md-5 text-center">
                 <img src="Immagini/Osculating Plane.png" class="img-fluid rounded shadow" style="max-width:200px;">

@@ -55,5 +55,14 @@ window.addEventListener('DOMContentLoaded', event => {
     new SimpleLightbox({
         elements: '#portfolio a.portfolio-box'
     });
+    
+    const sidebar = document.body.querySelector('#sidebar');
+
+    if (sidebar) {
+        new bootstrap.ScrollSpy(document.body, {
+            target: '#sidebar',
+            offset: 100
+        });
+    }
 
 });
