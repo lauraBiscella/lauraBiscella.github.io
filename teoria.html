@@ -31,6 +31,8 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="manualeutente.html">Manuale Utente</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="teoria.html">Teoria</a>
                 </li>
             </ul>
@@ -76,16 +78,16 @@
                 <p>Una curva parametrica nello spazio è una funzione</p>
                 <p>\[ P:I\subset \mathbb{R} \to \mathbb{E}^3 \]</p>
                 <p>definita nella forma</p>
-                <p>\[ P(t) = (x(t), y(t), z(t)) \]</p>
+                <p>\[ P(t) = (x(t), y(t), z(t)), \]</p>
                 <p>dove \( x(t), y(t), z(t) \) sono funzioni reali del parametro \( t \) definito nell'intervallo reale \( I \).</p>
             </div>
         </div>
 
-        <h2 id="regolarita">Regolarità</h2>
+        <h3 id="regolarita">Regolarità</h3>
         <div class="row align-items-center mb-5">
             <div class="col-md-12">
                 <p> Una curva si dice regolare se il suo <strong>vettore tangente</strong>(derivata prima), non si annulla mai: </p>
-                <p>\[ \dot{P}(t) \ne 0\ \ \ \ \ \ \forall t \in I \].</p>
+                <p>\[ \dot{P}(t) \ne 0\ \ \ \ \ \ \forall t \in I. \]</p>
                 <p>Ciò garantisce che in ogni punto della curva sia ben definita una <strong>retta tangente</strong> e la sua direzione.</p>
                 <p>Dal punto di vista geometrico una curva regolare non presenta cuspidi.</p>
             </div>
@@ -95,9 +97,9 @@
         <div class="row align-items-center mb-5">
             <div class="col-md-12">
                 <p>Una curva è detta fortemente regolare se la sua derivata prima e seconda sono linearmente indipendenti:</p>
-                <p>\[ \dot{P}(t) \times \ddot{P}(t) \ne 0 \].</p>
+                <p>\[ \dot{P}(t) \times \ddot{P}(t) \ne 0. \]</p>
                 <p>Questa condizione implica che in ogni punto della curva è definito univocamente un <strong>piano osculatore</strong>, ossia il piano che contiene la retta tangente e che meglio approssima la curva localmente:</p>
-                <p>\[ \pi = (P(t), \langle \dot{P}(t), \ddot{P}(t) \rangle) \].</p>
+                <p>\[ \pi = (P(t), \langle \dot{P}(t), \ddot{P}(t) \rangle). \]</p>
                 <p>Geometricamente, la curva non è localmente assimilabile a una retta.</p>
             </div>
         </div>
@@ -108,12 +110,12 @@
                 <p>Il frame di Frenet è un sistema di riferimento mobile lungo la curva, con origine nel punto generico \( P(t) \).</p>
                 <p>Esso è composto tre vettori ortogonali:</p>
                 <ul>
-                    <li><strong>Tangente</strong>: ci da la direzione del moto \[ T = \frac{\dot{P}}{||\dot{P}||} \],</li>
-                    <li><strong>Normale</strong>: ci da la direzione della curvatura \[ N = \frac{\dot{T}}{||\dot{T}||} \],</li>
-                    <li><strong>Binormale</strong>: perpendicolare al piano osculatore indentificato dagli altri due vettori \[ B = T \times N \].</li>
+                    <li><strong>Tangente</strong>: ci da la direzione del moto \[ T = \frac{\dot{P}}{||\dot{P}||}, \]</li>
+                    <li><strong>Normale</strong>: ci da la direzione della curvatura \[ N = \frac{\dot{T}}{||\dot{T}||}, \]</li>
+                    <li><strong>Binormale</strong>: perpendicolare al piano osculatore indentificato dagli altri due vettori \[ B = T \times N. \]</li>
                 </ul>
             <p>Il piano osculatore può quindi essere definito anche come:</p>
-            <p>\[ \pi = (P(t), \langle T, N \rangle ) \].</p>
+            <p>\[ \pi = (P(t), \langle T, N \rangle ). \]</p>
             </div>
         </div>
 
@@ -121,18 +123,18 @@
         <div class="row align-items-center mb-5">
             <div class="col-md-12">
                 <p>La curvatura è una funzione scalare definita per ogni punto della curva in questo modo:</p>
-                <p>\[ C(t) = \frac{||\dot{P}(t) \times \ddot{P}(t)||}{||\dot{P}(t)||^3} \],</p>
+                <p>\[ C(t) = \frac{||\dot{P}(t) \times \ddot{P}(t)||}{||\dot{P}(t)||^3}, \]</p>
                 <p>e misura quanto la curva devia localmente da una linea retta.</p>
                 <p>Essa rappresenta la velocità di rotazione del vettore tangente.</p>
             </div>
         </div>
 
-        <h2 id="torsione">Torsione</h2>
+        <h3 id="torsione">Torsione</h3>
         <div class="row align-items-center mb-5">
             <div class="col-md-12">
                 <p>La torsione è una funzione scalare definita per ogni punto della curva che misura quanto la curva si allontana dal piano osculatore, ovvero quanto veloemente tale piano ruota nello spazio.</p>
                 <p>Essa è definita per curve fortemente regolari di classe \( C^2 \) con questa equazione:</p>
-                <p>\[ \tau(t) = \frac{(\dot{P}(t) \times \ddot{P}(t)) \times \dddot{P}(t)}{||\dot{P}(t) \times \ddot{P}(t)||^2} \].</p>
+                <p>\[ \tau(t) = \frac{(\dot{P}(t) \times \ddot{P}(t)) \times \dddot{P}(t)}{||\dot{P}(t) \times \ddot{P}(t)||^2}. \]</p>
             </div>
         </div>
 
@@ -143,13 +145,13 @@
             </div>
         </div>
 
-        <h2 id="punti-controllo">Punti di controllo e poligono di controllo</h2>
+        <h3 id="punti-controllo">Punti di controllo e poligono di controllo</h3>
         <div class="row align-items-center mb-5">
             <p>Sia data una sequenza di \( n+1 \) punti </p>
-            <p>\[ \{P_0, P_1, ..., P_n\} \in \mathbb{R}^3 \],</p>
+            <p>\[ \{P_0, P_1, ..., P_n\} \in \mathbb{R}^3, \]</p>
             <p>essi costituiscono i <strong>punti di controllo</strong> che definiscono univocamente la curva di Bézier, mentre la spezzata che li unisce è il <strong>poligono di controllo</strong>.</p>
             <p>La curva di Bézier di grado \( n \) si definisce quindi come</p>
-            <p>\[ B(t) = \sum_{i=0}^nB_i^n(t)P_i \],</p>
+            <p>\[ B(t) = \sum_{i=0}^nB_i^n(t)P_i, \]</p>
             <p>con \( t \in [0,1] \) e dove \( B_i^n \) sono i <strong>polinomi di Bernstein</strong>.</p>
         </div>
 
@@ -157,11 +159,11 @@
         <div class="row align-items-center mb-5">
             <div class="col-md-12">
                 <p>I polinomi d Bernstein sono definit come</p>
-                <p>\[ B_i^n(t) = \binom{n}{i}t^i(1-t)^{n-i} \].</p>
+                <p>\[ B_i^n(t) = \binom{n}{i}t^i(1-t)^{n-i}. \]</p>
                 <p>Essi possiedono proprietà importanti:</p>
                 <ul>
                     <li>positività su \( [0,1] \),</li>
-                    <li>partizione dell'unità \[ \sum_{i=0}^nB_i^n(t)=1 \].</li>
+                    <li>partizione dell'unità \[ \sum_{i=0}^nB_i^n(t)=1. \]</li>
                 </ul>
                 <p>Da queste proprietà segue che la curva è contenuta nell'involucro convesso dei punti di controllo, generato dal poligono di controllo. Per questo posso controllare l'andamento della curva spostando i punti di controllo.</p>
             </div>
@@ -186,7 +188,7 @@
                 <p>Le curve di Bézier sono definite sul'intervallo standard \( [0,1] \) ma per poterle incollare serve ridefinire le curve su intervalli generici \( [a,b] \), in modo da creare un'unione di intervalli adiacenti.</p>
                 <p>Questo si fa tramite il passaggio da una curva ad una equivalente con una funzione \( t=t(\tau) \) binuivoca, bicontinua e bidifferenziabile.</p>
                 <p>La funzione standard più utilizzata è:</p>
-                <p>\[ t = \frac{\tau - a}{b-a} \],</p>
+                <p>\[ t = \frac{\tau - a}{b-a}, \]</p>
                 <p>la quale fa si che quando considero la curva \( G(\tau)=P[t(\tau)] \) essa sia la stessa curva \( P(t) \) definita sul dominio \( [0,1] \) ma definita sul dominio \( a,b] \).</p>
                 <p>Si possono ora definire le condizioni di incollamento, per cui ciascuna implica la precedente.</p>
                 <p>Date due curve di Bezier:</p>
@@ -196,18 +198,18 @@
                 </ul>
                 <p>abbiamo le sequenti condizioni di incollamento:</p>
                 <ul>
-                    <li>Incollamento \( C^0 \): continuità della tangente, non si sono spigoli, il vettore tangente varia con continuità: \[ \dot{P}(b) = \dot{Q}(b) \]. Svolgendo i calcoli otteniamo \[ (c-b)(P_k - P_{k-1}) = (b-a)(Q_1-Q_0) \]. Per semplicità da questo momento chiameremo il punto \( Q_0 \) come \( P_k \) poichè vale \( C^0 \). Da qui deduciamo che:
+                    <li>Incollamento \( C^0 \): continuità della tangente, non si sono spigoli, il vettore tangente varia con continuità: \[ \dot{P}(b) = \dot{Q}(b). \] Svolgendo i calcoli otteniamo \[ (c-b)(P_k - P_{k-1}) = (b-a)(Q_1-Q_0). \] Per semplicità da questo momento chiameremo il punto \( Q_0 \) come \( P_k \) poichè vale \( C^0 \). Da qui deduciamo che:
                         <ul>
                             <li>I due vettori \( P_k - P_{k-1} \) e \( Q_1 - P_k \) siano dipendenti e quindi i tre punti \( P_{k-1}, P_k, Q_1 \) sono allineati, quindi la retta tangente varia con continuità del punto e quindi la retta tangente varia con continuità.</li>
-                            <li>Esiste una relazione precisa tra le lunghezze dei segmenti \( P_{k-1}P_k \) e \( P_kQ_1 \) determinata dalla posizione dei valori \( a, b, c \) sull'asse dei numeri reali, per cui deve quindi valere la formula: \[ (a,b,c) = (P_{k-1}, P_k, Q_1) \]. Quindi il vettore tangente varia con continuità. Definiamo il <strong>rapporto semplice</strong> di 3 punti \( a,b,c \) allineati come \[ (a,b,c) = \pm \frac{ac}{bc} \].</li>
+                            <li>Esiste una relazione precisa tra le lunghezze dei segmenti \( P_{k-1}P_k \) e \( P_kQ_1 \) determinata dalla posizione dei valori \( a, b, c \) sull'asse dei numeri reali, per cui deve quindi valere la formula: \[ (a,b,c) = (P_{k-1}, P_k, Q_1). \] Quindi il vettore tangente varia con continuità. Definiamo il <strong>rapporto semplice</strong> di 3 punti \( a,b,c \) allineati come \[ (a,b,c) = \pm \frac{ac}{bc}. \]</li>
                         </ul>
                     </li>
                     <li>
-                        Incollamento \( C^2 \): continuità della curvatura, la transizione è fluida cioè la curvatura non ha salti. Il vettore derivata seconda varia con continuità e quindi geometricamente il piano osculatore varia con continuità e la curvatura varia con continuità: \[ \ddot{P}(b) = \ddot(Q)(b) \]. Possiamo dire che:
+                        Incollamento \( C^2 \): continuità della curvatura, la transizione è fluida cioè la curvatura non ha salti. Il vettore derivata seconda varia con continuità e quindi geometricamente il piano osculatore varia con continuità e la curvatura varia con continuità: \[ \ddot{P}(b) = \ddot(Q)(b). \] Possiamo dire che:
                         <ul>
-                            <li>Per condizione di incollamento \( C^1 \): \[ (a,b,c) = (P_{k-1}, P_k, Q_1) \],</li>
+                            <li>Per condizione di incollamento \( C^1 \): \[ (a,b,c) = (P_{k-1}, P_k, Q_1), \]</li>
                             <li>Questa condizione richiede l'introduzione di un punto chiamato punto di De Boor(\( D \)) ed è il punto di intersezione dei prolungamenti dei segmenti \( P_{k-2}P_{k-1} \) e \( Q_1Q_2 \). Quindi abbiamo come condizione che queste due rette si incontrino in un punto.</li>
-                            <li>Inoltre abbiamo anche una condizione sui rapporti semplici: \[ (P_{k-2}, P_{k-1}, D) = (a,b,c), \] \[ (D, \Q_1, \Q_2) = (a,b,c) \].</li>
+                            <li>Inoltre abbiamo anche una condizione sui rapporti semplici: \[ (P_{k-2}, P_{k-1}, D) = (a,b,c), \] \[ (D, Q_1, Q_2) = (a,b,c). \]</li>
                         </ul>
                     </li>
                 </ul>
@@ -226,7 +228,7 @@
         <div class="row align-items-center mb-5">
             <div class="col-md-12">
                 <p>Sia data una sequenza di \( n+1 \) punti</p>
-                <p>\[ \{P_0, P_1, ..., P_n \in \mathbb{R}^3\} \]</p>
+                <p>\[ \{P_0, P_1, ..., P_n\} \in \mathbb{R}^3, \]</p>
                 <p>essi costituiscono i <strong>punti di De Boor</strong> (o punti di controllo della B-spline) che definiscono parzialmente la curva B-Spline, mentre la spezzata che li unisce costituisce il <strong>poligono di De Boor</strong>.</p>
                 <p>A differenza delle curve di Bézier, ogni punto influenza solo una porzione limitata della curva. Nello specifico vengono influenzate al massimo 3 curve di Bezier contemporaneamente, per questo sono più efficienti delle curve di Bezier che invece alzano il grado dei polinomi.</p>
             </div>
@@ -236,7 +238,7 @@
         <div class="row align-items-center mb-5">
             <div class="col-md-12">
                 <p>Una B-Spline è definita anche da una sequenza non decrescente di valori:</p>
-                <p>\[ \{n_0, n_1, ..., n_m\} \in \mathbb{R}\],</p>
+                <p>\[ \{n_0, n_1, ..., n_m\} \in \mathbb{R}, \]</p>
                 <p>che costituiscono i <strong>nodi</strong> della B-Spline.</p>
                 <p>I nodi si trovano sul dominio della curva in coincidenza dei punti di incollamento delle curve di Bézier che la compongono, più il punto iniziale del primo intervallo e finale dell'ultimo.</p>
                 <p>La distanza tra uno e l'altro è l'intervallo di definizione della singola curva di Bézier e considerati due nodi consecutivi \( u_0 \) e \( u_1 \) l'intervallo si definisce come \( \Delta_0 = u_1 - u_0 \).</p>
@@ -259,15 +261,15 @@
                 <p>Per definire una B-Spline ci servono i nodi e i punti di De Boor. Nel nostro caso:</p>
                 <ul>
                     <li>Sappiamo che ah 5 nodi, quello iniziale e finale e i 3 nodi legati agli incollamenti \[ \{n_0, ..., n_4\} \in \mathbb{R} \]</li>
-                    <li>Sappiamo da questa formula: \[ \#DeBoor = 2_{inizio} + 2_{fine} + (l-1) \] che abbiamo 7 punti di De Boor. I primi due e gli ultimi due coincidenti con i punti di controllo iniziali e finali della prima e ultima curva di Bezier, \[ P_0 = D_{-1} \ \ \ P_1 = D_0 \ \ \ P_{11} = D_4 \ \ \ P_{12} = D_5\] e gli altri 3 in corrispondenza degli incollamenti.</li>
+                    <li>Sappiamo da questa formula: \[ \#DeBoor = 2_{inizio} + 2_{fine} + (l-1) \] che abbiamo 7 punti di De Boor. I primi due e gli ultimi due coincidenti con i punti di controllo iniziali e finali della prima e ultima curva di Bezier, \[ P_0 = D_{-1} \ \ \ P_1 = D_0 \ \ \ P_{11} = D_4 \ \ \ P_{12} = D_5 \] e gli altri 3 in corrispondenza degli incollamenti.</li>
                 </ul>
                 <p>Avendo incollato quattro curve di Bezier sappiamo che in totale avremo 13 punti di controllo di Bezier</p>
-                <p>\[ \{P_0, ..., P_{12}\} \in \mathbb{R}^3 \],</p>
+                <p>\[ \{P_0, ..., P_{12}\} \in \mathbb{R}^3, \]</p>
                 <p>poichè sarebbero 4 per poligono meno i tre duplicati agli incollamenti.</p>
                 <p>Possiamo ricavarne le posizioni e quindi i poligoni di controllo di Bezier tramite queste formule:</p>
-                <p>\[ P_{3p} = \frac{\Delta_p}{\Delta_{p+1} + \Delta_p} P_{3p-1} + \frac{\Delta_{p-1}}{\Delta_{p+1}+\Delta_p} P_{3p+1} \],</p>
-                <p>\[ P_{3p-1} = \frac{\Delta_p}{\Delta} D_{p-1} + \frac{\Delta_{p-2} + \Delta{p-1}}{\Delta} D_p \],</p>
-                <p>\[ P_{3p-2} = \frac{\Delta_p-1 + \Delta_p}{\Delta} D_{p-1} \],</p>
+                <p>\[ P_{3p} = \frac{\Delta_p}{\Delta_{p+1} + \Delta_p} P_{3p-1} + \frac{\Delta_{p-1}}{\Delta_{p+1}+\Delta_p} P_{3p+1}, \]</p>
+                <p>\[ P_{3p-1} = \frac{\Delta_p}{\Delta} D_{p-1} + \frac{\Delta_{p-2} + \Delta{p-1}}{\Delta} D_p, \]</p>
+                <p>\[ P_{3p-2} = \frac{\Delta_p-1 + \Delta_p}{\Delta} D_{p-1}, \]</p>
                 <p>dove \(\Delta = \Delta_{p-2} + \Delta_{p-1} + \Delta_p \).</p>
                 <p>Sfruttiamo il valore del podice scegliendo quelli in cui è:</p>
                 <ul>
