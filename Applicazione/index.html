@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | 3DCurveAnimation</title>
+    <title>Unity Web Player | 3D Curve Visualizer</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-logo-title-footer"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">3DCurveAnimation</div>
+        <div id="unity-build-title">3D Curve Visualizer</div>
       </div>
     </div>
     <script>
@@ -60,7 +60,7 @@
         codeUrl: buildUrl + "/Applicazione.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "3DCurveAnimation",
+        productName: "3D Curve Visualizer",
         productVersion: "0.1",
         showBanner: unityShowBanner,
         // errorHandler: function(err, url, line) {
@@ -105,10 +105,10 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
         function resizeCanvas() {
-          canvas.style.width = "100%";
-          canvas.style.height = "100%";
-        }
-        resizeCanvas();
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+      }
+      resizeCanvas();
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
