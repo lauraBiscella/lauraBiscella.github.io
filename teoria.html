@@ -118,11 +118,11 @@
             <div class="row align-items-center mb-5">
                 <div class="col-md-12">
                     <p>Il frame di Frenet è un sistema di riferimento mobile lungo la curva, con origine nel punto generico \( P(t) \).</p>
-                    <p>Esso è composto tre vettori ortogonali:</p>
+                    <p>Esso è composto tre vettori che formano una <strong>base ortonormale destrorsa</strong>, cioè i tre vettori sono ortogonali tra di loro e hanno un'orientazione destrorsa, cioè seguono la regola della mano destra:</p>
                     <ul>
                         <li><strong>Tangente</strong>: ci da la direzione del moto \[ T = \frac{\dot{P}}{||\dot{P}||}, \]</li>
                         <li><strong>Normale</strong>: ci da la direzione della curvatura \[ N = \frac{\dot{T}}{||\dot{T}||}, \]</li>
-                        <li><strong>Binormale</strong>: perpendicolare al piano osculatore indentificato dagli altri due vettori \[ B = T \times N. \]</li>
+                        <li><strong>Binormale</strong>: perpendicolare al piano osculatore indentificato dagli altri due vettori \[ B = T \times N, \] ricavabile tramite la formula sovrstante grazie alla proprietà del sistema di riferimento di essere una base ortonormale destrorsa.</li>
                     </ul>
                 <p>Il piano osculatore può quindi essere definito anche come:</p>
                 <p>\[ \pi = (P(t), \langle T, N \rangle ). \]</p>
@@ -370,10 +370,14 @@
                 <div class="col-md-7">
                     <ul>
                         <li>Siccome \( \dot{P}(t) \) e \( \ddot{P}(t) \) sono indipendenti, ma l'indipendenza tra questi due vettori e \( \dddot{P}(t) \) non è garantita la funzione può essere identicamente zero.</li>
-                        <li>Se \( \tau=0 \) il supporto della curva è contenuto in un piano e il piano è quello osculatore. Per questo si definisce solo per curve nello spazio.</li>
+                        <li>Se \( \tau=0 \), il piano osculatore smette di ruotare, il supporto della curva è contenuto in un piano e il piano è quello osculatore. Per questo motivo la torsione si definisce solo per curve nello spazio.</li>
                         <li>Più la torsione è grande più il piano osculatore si muove rapidamente, quindi la torsione può essere interpretata come: quanto velocemente la curva si discosta dall'essere una curva piana.</li>
-                        <li>Il segno positivo o negativo della torsione dipende dal verso in cui viene percorso il supporto della curva e denota se il piano osculatore sta ruotando in un verso o nell'altro, cioè se la curva si trova nel semispazio superiore o inferiore al piano osculatore, questo è chiaramente visibile dal verso del vettore binormale del frame di frenet, sempre perpendicolare al piano osculatore.</li>
-                        <li>Massimi e minimi rappresentano forti twist della curva.</li>
+                        <li>Il segno della torsione è dato dal fatto che il sistema di riferimento mobile è una base ortonormale destrorsa, grazie al quale possiamo deifnire il positivo secondo la regola della mano destra.</li>
+                            <ul>
+                                <li>Positivo: il vettore binormale cambia nella direzione \(-N\), dove \(N\) è il vettore normale, dunque il piano osculatore ruota in modo destrorso secondo la regola della mano destra e la curva abbandona il piano andando da \(-B\) a \(+B\),</li>
+                                <li>Negativo: il vettore binormale cambia nella direzione \(N\), dunque il piano osculatore ruota in modo sinistrorso e la curva esce dal piano nel verso opposto.</li>
+                            </ul>
+                        <li>Massimi e minimi rappresentano i massimi locali del twist della curva, cioè punti in cui la rotazione del piano è massima in un verso o nell'altro.</li>
                         <li>Se \( \tau \) e \( C \) sono costanti allora la curva è un'elica cilindrica.</li>
                         <li>Se \( \tau = 0 \) e \( C \) è costante allora la curva è una circonferenza.</li>
                     </ul>
