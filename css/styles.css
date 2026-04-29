@@ -11072,6 +11072,16 @@ footer .text-muted {
   background-color: #1e1e1e !important;
 }
 
+#sidebar {
+  width: 260px;
+  position: fixed;
+  top: 70px;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  padding-bottom: 80px;
+}
+
 #sidebar .nav-link {
     font-size: 0.90rem;
     padding: 4px 6px;
