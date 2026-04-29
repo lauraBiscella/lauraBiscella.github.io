@@ -123,7 +123,7 @@
                     <ul>
                         <li><strong>Tangente</strong>: ci da la direzione del moto \[ T = \frac{\dot{P}}{||\dot{P}||}, \]</li>
                         <li><strong>Normale</strong>: ci da la direzione della curvatura \[ B = \frac{\dot{P} \wedge \ddot{P}}{||\dot{P} \wedge \ddot{P}||}, \]</li>
-                        <li><strong>Binormale</strong>: perpendicolare al piano osculatore \[ N = T \times B, \] ricavabile tramite la formula sovrstante grazie alla proprietà del sistema di riferimento di essere una base ortonormale destrorsa.</li>
+                        <li><strong>Binormale</strong>: perpendicolare al piano osculatore \[ N = T \wedge B, \] ricavabile tramite la formula sovrstante grazie alla proprietà del sistema di riferimento di essere una base ortonormale destrorsa.</li>
                     </ul>
                 <p>Il piano osculatore può quindi essere definito anche come:</p>
                 <p>\[ \pi = (P(t), \langle T, N \rangle ). \]</p>
@@ -136,7 +136,7 @@
             <div class="row align-items-center mb-5">
                 <div class="col-md-12">
                     <p>La curvatura è una funzione scalare definita per ogni punto della curva in questo modo:</p>
-                    <p>\[ C(t) = \frac{||\dot{P}(t) \times \ddot{P}(t)||}{||\dot{P}(t)||^3}, \]</p>
+                    <p>\[ C(t) = \frac{||\dot{P}(t) \wedge \ddot{P}(t)||}{||\dot{P}(t)||^3}, \]</p>
                     <p>e misura quanto la curva devia localmente da una linea retta.</p>
                     <p>Essa rappresenta la velocità di rotazione del vettore tangente.</p>
                 </div>
@@ -235,7 +235,7 @@
                                 <li>I due vettori \( P_k - P_{k-1} \) e \( Q_1 - P_k \) sono dipendenti e quindi i tre punti \( P_{k-1}, P_k, Q_1 \) sono allineati, quindi la retta tangente varia con continuità (la curva non presenta degli spigoli).</li>
                                 <li>
                                     <p>Esiste una relazione precisa tra le lunghezze dei segmenti \( P_{k-1}P_k \) e \( P_kQ_1 \) determinata dalla posizione dei valori \( a, b, c \) sull'asse dei numeri reali, per cui deve quindi valere questa formula sui rapporti semplici: \[ (a,b,c) = (P_{k-1}, P_k, Q_1). \] Dalla quale deduciamo che anche il vettore tangente varia con continuità.</p>
-                                    <p>Il <strong>rapporto semplice</strong> di 3 numeri reali \( a,b,c \) definiti in modo che \(a < b < c\) è espresso dalla formula: \[ (a,b,c) = \pm \frac{ac}{bc}, \] e per i tre punti è definito da questa formula: \[(P_{k-1}, P_k, Q_1) = \frac{Q_1 - P_{k-1}}{Q_1 - P_k}.\]</p>
+                                    <p>Il <strong>rapporto semplice</strong> di 3 numeri reali \( a,b,c \) definiti in modo che \(a < b < c\)  è espresso dalla formula: \[ (a,b,c) = \pm \frac{ac}{bc}, \] e per i tre punti è definito da questa formula: \[(P_{k-1}, P_k, Q_1) = \frac{Q_1 - P_{k-1}}{Q_1 - P_k}.\]</p>
                                 </li>
                             </ul>
                         </li>
@@ -377,15 +377,12 @@
                     </ul>
                     <p>I due grafici nelle figure mostrano degli esempi di curve rispettivamente con brutte propietà geometriche e con belle proprietà geometriche, questo dipende dall'alta (primo esempio) o bassa (secondo esempio) variazione repentina dei valori di curvatura e torsione.</p>
                 </div>
-                <div class="col-md-5 text-center">
-                    <img src="Immagini/es-curvatura-torsione-belli.png" class="img-fluid rounded shadow" style="max-width:400px">
-                </div>
             </div>
         </section>
         <section id="generale">
             <h3>Analisi generale</h3>
             <div class="row align-items-center mb-5">
-                <div class="col-md-7">
+                <div class="col-md-6">
                     <p>Per valori specifi di curvatura e torsione si possono ottenere confirazioni notevoli delle curve:</p>
                     <ul>
                         <li>Se \( \tau \) e \( C \) sono costanti allora la curva è un'elica cilindrica.</li>
@@ -397,7 +394,7 @@
                         <li>Estetica geometrica: la bellezza dell'estetica geometrica di una curva può essere dedotta dalla variazione repentina di curvatura e torsione. Più cambiano repentinamente più la curva viene considerata "brutta" esteticamente. Questo è visibile chiaramente nei due esempi mostrati nelle figure accanto, creati e riproducibili tramite l'applicazione, che mostrano la rappresentazione di due curve e i loro rispettivi grafici di curvatura e torsione.</li>
                     </ul>
                 </div>
-                <div class="col-md-5 text-center">
+                <div class="col-md-6 text-center">
                     <img src="Immagini/es-curvatura-torsione-brutti.png" class="img-fluid rounded shadow" style="max-width:400px;">
                     <img src="Immagini/es-curva.png" class="img-fluid rounded shadow" style="max-width:400px;">
                     <img src="Immagini/es-curvatura-torsione-belli.png" class="img-fluid rounded shadow" style="max-width:400px">
