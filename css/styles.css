@@ -11097,3 +11097,19 @@ footer .text-muted {
     background-color: rgba(255,255,255,0.1);
     border-radius: 5px;
 }
+
+#sidebar .nav-link {
+    font-size: 0.90rem;
+    padding: 4px 6px;
+}
+
+#sidebar .nav-link.active {
+    background-color: #3f21c6; /* colore tema */
+    color: white !important;
+    border-radius: 5px;
+}
+
+#sidebar .nav-link:hover {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+}
