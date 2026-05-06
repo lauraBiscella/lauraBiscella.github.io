@@ -316,7 +316,7 @@
                     <p>Possiamo ricavarne le posizioni e quindi i poligoni di controllo di Bezier tramite queste formule:</p>
                     <p>\[ P_{3p} = \frac{\Delta_p}{\Delta_{p-1} + \Delta_p} P_{3p-1} + \frac{\Delta_{p-1}}{\Delta_{p-1}+\Delta_p} P_{3p+1}, \]</p>
                     <p>\[ P_{3p-1} = \frac{\Delta_p}{\Delta} D_{p-1} + \frac{\Delta_{p-2} + \Delta_{p-1}}{\Delta} D_p, \]</p>
-                    <p>\[ P_{3p-2} = \frac{\Delta_{p-1} + \Delta_p}{\Delta} D_{p-1}+(\frac{\Delta_{p-2}}{\Delta})D_p, \]</p>
+                    <p>\[ P_{3p-2} = \frac{\Delta_{p-1} + \Delta_p}{\Delta} D_{p-1}+\frac{\Delta_{p-2}}{\Delta}D_p, \]</p>
                     <p>dove \(\Delta = \Delta_{p-2} + \Delta_{p-1} + \Delta_p \).</p>
                     <p>Tali formule ci permettono di definire i punti di controllo di Bézier secondo questa logica:</p>
                     <ul>
