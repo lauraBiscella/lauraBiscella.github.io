@@ -122,8 +122,8 @@
                     <p>Esso è composto tre versori che formano una <strong>base ortonormale destrorsa</strong>, cioè i tre versori sono ortogonali tra di loro e hanno un'orientazione destrorsa, cioè seguono la regola della mano destra:</p>
                     <ul>
                         <li><strong>Tangente</strong>: ci da la direzione del moto \[ T = \frac{\dot{P}}{||\dot{P}||}, \]</li>
-                        <li><strong>Normale</strong>: ci da la direzione della curvatura \[ B = \frac{\dot{P} \wedge \ddot{P}}{||\dot{P} \wedge \ddot{P}||}, \]</li>
-                        <li><strong>Binormale</strong>: perpendicolare al piano osculatore \[ N = T \wedge B, \] ricavabile tramite la formula sovrstante grazie alla proprietà del sistema di riferimento di essere una base ortonormale destrorsa.</li>
+                        <li><strong>Binormale</strong>: perpendicolare al piano osculatore \[ B = \frac{\dot{P} \wedge \ddot{P}}{||\dot{P} \wedge \ddot{P}||}, \]</li>
+                        <li><strong>Normale</strong>: \[ N = T \wedge B, \] ricavabile tramite la formula sovrstante grazie alla proprietà del sistema di riferimento di essere una base ortonormale destrorsa.</li>
                     </ul>
                 <p>Il piano osculatore può quindi essere definito anche come:</p>
                 <p>\[ \pi = (P(t), \langle T, N \rangle ). \]</p>
@@ -148,7 +148,7 @@
             <div class="row align-items-center mb-5">
                 <div class="col-md-12">
                     <p>La torsione è una funzione scalare definita per ogni punto della curva che misura quanto la curva si allontana dal piano osculatore, ovvero quanto velocemente tale piano ruota nello spazio.</p>
-                    <p>Essa è definita per curve fortemente regolari con questa equazione:</p>
+                    <p>Essa è definita per curve fortemente regolari di classe \( C^3 \) con questa equazione:</p>
                     <p>\[ \tau(t) = \frac{(\dot{P}(t) \wedge \ddot{P}(t)) \times \dddot{P}(t)}{||\dot{P}(t) \wedge \ddot{P}(t)||^2}. \]</p>
                 </div>
             </div>
@@ -235,7 +235,7 @@
                                 <li>I due vettori \( P_k - P_{k-1} \) e \( Q_1 - P_k \) sono dipendenti e quindi i tre punti \( P_{k-1}, P_k, Q_1 \) sono allineati, quindi la retta tangente varia con continuità (la curva non presenta degli spigoli).</li>
                                 <li>
                                     <p>Esiste una relazione precisa tra le lunghezze dei segmenti \( P_{k-1}P_k \) e \( P_kQ_1 \) determinata dalla posizione dei valori \( a, b, c \) sull'asse dei numeri reali, per cui deve quindi valere questa formula sui rapporti semplici: \[ (a,b,c) = (P_{k-1}, P_k, Q_1). \] Dalla quale deduciamo che anche il vettore tangente varia con continuità.</p>
-                                    <p>Il <strong>rapporto semplice</strong> di 3 numeri reali \( a,b,c \) definiti in modo che \(a < b < c\)  è espresso dalla formula: \[ (a,b,c) = \frac{ac}{bc}, \] e per i tre punti è definito da questa formula: \[(P_{k-1}, P_k, Q_1) = \frac{Q_1 - P_{k-1}}{Q_1 - P_k}.\]</p>
+                                    <p>Il <strong>rapporto semplice</strong> di 3 numeri reali \( a,b,c \) tali che in modo che  \( a < b < c \)  è espresso dalla formula: \[ (a,b,c) = \frac{b-a}{c-b}, \] e per i tre punti è definito da questa formula: \[(P_{k-1}, P_k, Q_1) = \frac{||P_k - P_{k-1}||}{||Q_1 - P_k||}.\]</p>
                                 </li>
                             </ul>
                         </li>
@@ -245,7 +245,7 @@
                                 <li>La condizione di incollamento \( C^1 \) si traduce in: \[ (a,b,c) = (P_{k-1}, P_k, Q_1), \]</li>
                                 <li>
                                     <p>La condizione di incollamento \( C^2 \) si traduce in:</p>
-                                    <p>Le rette create dai prolungamenti dei segmenti \( P_{k-2}P_{k-1} \) e \( Q_1Q_2 \) devono incontrarsi in un punto nello spazio detto <strong>punto di De Boor</strong> (\(D\)), e deve valere anche questa condizione sui rapporti semplici: \[ (P_{k-2}, P_{k-1}, D) = (a,b,c), \] \[ (D, Q_1, Q_2) = (a,b,c). \]</p>
+                                    <p>le rette create dai prolungamenti dei segmenti \( P_{k-2}P_{k-1} \) e \( Q_1Q_2 \) devono incontrarsi in un punto nello spazio detto <strong>punto di De Boor</strong> (\(D\)), e deve valere anche questa condizione sui rapporti semplici: \[ (P_{k-2}, P_{k-1}, D) = (a,b,c), \] \[ (D, Q_1, Q_2) = (a,b,c). \]</p>
                                 </li>
                             </ul>
                         </li>
@@ -318,11 +318,11 @@
                     <p>\[ P_{3p-1} = \frac{\Delta_p}{\Delta} D_{p-1} + \frac{\Delta_{p-2} + \Delta_{p-1}}{\Delta} D_p, \]</p>
                     <p>\[ P_{3p-2} = \frac{\Delta_{p-1} + \Delta_p}{\Delta} D_{p-1}+(\frac{\Delta_{p-2}}{\Delta})D_p, \]</p>
                     <p>dove \(\Delta = \Delta_{p-2} + \Delta_{p-1} + \Delta_p \).</p>
-                    <p>Le quali ci permettono di definire i punti di controllo di Bézie secondo questa logica:</p>
+                    <p>Tali formule ci permettono di definire i punti di controllo di Bézier secondo questa logica:</p>
                     <ul>
-                        <li>Multiplo di \( 3: (P_3, P_6, P_9) \),</li>
-                        <li>Multiplo di \( 3-1: (P_2, P_5, P_8) \),</li>
-                        <li>Multiplo di \( 3+1 \) (che può essere riscritto come \( 3-2 \)): \((P_4, P_7, P_{10}) \).</li>
+                        <li>Punto con podice multiplo di \( 3: (P_3, P_6, P_9) \),</li>
+                        <li>Punto con podice multiplo di \( 3-1: (P_2, P_5, P_8) \),</li>
+                        <li>Punto con podice multiplo di \( 3+1 \) (che può essere riscritto come \( 3-2 \)): \((P_4, P_7, P_{10}) \).</li>
                     </ul>
                 </div>
             </div>
@@ -334,7 +334,7 @@
                 <div class="col-md-12">
                     <p>Una curva che sia definita su un intervallo chiuso e limitato nello spazio è determinata unicamente, a meno di movimenti rigidi, dalle funzioni curvatura e torsione.</p>
                     <p>Definendo quindi dei valori di curvatura e torsione non è possibile deformare la curva nello spazio in modo continuo senza alterarli.</p>
-                    <p>Questo teorema è ciò che denota l'importanta di queste due proprietà della curva e quanto la loro analisi da informazioni essenziali sull'andamento geometrico di una curva.</p>
+                    <p>Questo teorema è ciò che denota l'importanta di queste due proprietà della curva e quanto la loro analisi dà informazioni essenziali sull'andamento geometrico di una curva.</p>
                 </div>
             </div>
         </section>
@@ -350,8 +350,8 @@
                     <ul>
                         <li>Per la proprietà di regolarità la curvatura è sempre strettamente positiva. Essendo sia la Bézier sia la B-Spline curve fortemente regolari la direzione della tangente cambia sempre, e quindi ruota sempre.</li>
                         <li>Minimi: la curva è assimilabile ad una retta, cioè la curva passa dal punto avvicinandosi molto alla retta tangente.</li>
-                        <li>Massimi: la curva presenta un gomito, quasi una cuspide, cioè la curva passa dal punto allontanandosi molto dalla retta tangente. qui la velocità della retta tangente è massima.</li>
-                        <li>Agli incollamenti della B-Spline, poichè gli incollamenti sono di tipo \( C^2 \) e quindi garantiscono continuità di tangenza e curvatura, non si hanno cuspidi. Però in corrispondenza dei nodi puoi avere massimi locali o variazioni di concavità.</li>
+                        <li>Massimi: la curva presenta un gomito, quasi una cuspide, cioè la curva passa dal punto allontanandosi molto dalla retta tangente. Qui la velocità di variazione della retta tangente è massima.</li>
+                        <li>Nei punti di incollamento della B-Spline, poichè gli incollamenti sono di tipo \( C^2 \) e quindi garantiscono continuità di tangenza e curvatura, non si hanno cuspidi. In corrispondenza dei nodi, invece, si possono avere massimi locali o variazioni di concavità.</li>
                     </ul>
                 </div>
             </div>
@@ -362,15 +362,15 @@
             <div class="row align-items-center mb-5">
                 <div class="col-md-12">
                     <ul>
-                        <li>Siccome \( \dot{P}(t) \) e \( \ddot{P}(t) \) sono indipendenti, ma l'indipendenza tra questi due vettori e \( \dddot{P}(t) \) non è garantita la funzione può essere identicamente zero.</li>
+                        <li>Siccome \( \dot{P}(t) \) e \( \ddot{P}(t) \) sono indipendenti, ma l'indipendenza tra questi due vettori e \( \dddot{P}(t) \) non è garantita, la torsione può essere nulla e anche identicamente zero.</li>
                         <li>Se \( \tau=0 \), il piano osculatore resta costante, il supporto della curva è contenuto in un piano e il piano è quello osculatore. Per questo motivo la torsione si definisce solo per curve nello spazio.</li>
-                        <li>Più la torsione è grande più il piano osculatore si muove rapidamente, quindi la torsione può essere interpretata come: quanto velocemente la curva si discosta dall'essere una curva piana.</li>
+                        <li>Più la torsione è grande più il piano osculatore si muove rapidamente, quindi la torsione può essere interpretata come: quanto la curva si discosta dall'essere una curva piana.</li>
                         <li>Possiamo dare l'interpretazione del segno della torsione grazie al fatto che il sistema di riferimento mobile è una base ortonormale destrorsa:</li>
                             <ul>
                                 <li>Positivo: il versore binormale cambia nella direzione \(-N\), dove \(N\) è il versore normale, dunque il piano osculatore ruota in modo destrorso secondo la regola della mano destra e la curva abbandona il piano andando da \(-B\) a \(+B\),</li>
                                 <li>Negativo: il versore binormale cambia nella direzione \(N\), dunque il piano osculatore ruota in modo sinistrorso e la curva esce dal piano nel verso opposto.</li>
                             </ul>
-                        <li>Massimi e minimi rappresentano i massimi locali del twist della curva, cioè punti in cui la rotazione del piano è massima in un verso o nell'altro.</li>
+                        <li>Massimi e minimi rappresentano i massimi locali del twist della curva, cioè punti in cui la rotazione del piano è massima o minima in un verso o nell'altro.</li>
                     </ul>
                 </div>
             </div>
@@ -379,7 +379,7 @@
             <h3>Analisi generale</h3>
             <div class="row align-items-center mb-5">
                 <div class="col-md-12">
-                    <p>Per valori specifici di curvatura e torsione si possono ottenere configurazioni notevoli delle curve:</p>
+                    <p>Per valori specifici di curvatura e torsione si possono ottenere informazioni notevoli sulle curve:</p>
                     <ul>
                         <li>Se \( \tau \) e \( C \) sono costanti allora la curva è un'elica cilindrica,</li>
                         <li>Se \( \tau = 0 \) e \( C \) è costante allora la curva è una circonferenza.</li>
